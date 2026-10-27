@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>305 班 畢業旅行數位紀念特刊 ｜ 陽光・海風・青春正甜！</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Noto+Serif+TC:wght@700;900&family=Caveat:wght@700&family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kaohsiung-sun: #ff6b00;
+            --kaohsiung-amber: #f59e0b;
+            --kaohsiung-yellow: #facc15;
+            --ocean-blue: #0284c7;
+            --ocean-sky: #38bdf8;
+            --ocean-cyan: #06b6d4;
+            --coral-pink: #f43f5e;
+            --fresh-green: #10b981;
+            
+            --bg-page: #f8fbff;
+            --bg-card: rgba(255, 255, 255, 0.92);
+            --bg-glass: rgba(255, 255, 255, 0.88);
+            
+            --text-heading: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            
+            --border-soft: rgba(2, 132, 199, 0.14);
+            --border-sun: rgba(255, 107, 0, 0.25);
+            
+            --shadow-sun: 0 14px 34px -4px rgba(2, 132, 199, 0.12), 0 6px 14px -2px rgba(255, 107, 0, 0.08);
+            --shadow-hover: 0 20px 40px -6px rgba(2, 132, 199, 0.2), 0 10px 18px -4px rgba(255, 107, 0, 0.15);
+            
+            --radius-md: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 32px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 15%, rgba(255, 170, 0, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 50% 60%, rgba(244, 63, 94, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 85% 90%, rgba(6, 182, 212, 0.12) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(18px);
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom: 2px solid rgba(2, 132, 199, 0.12);
+            box-shadow: 0 4px 20px rgba(2, 132, 199, 0.06);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .brand-badge {
+            width: 46px;
+            height: 46px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #ff6b00, #ffb703);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fredoka', cursive, sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.38);
+            transform: rotate(-3deg);
+            transition: transform 0.2s ease;
+        }
+
+        .brand:hover .brand-badge {
+            transform: rotate(4deg) scale(1.08);
+        }
+
+        .brand-text h1 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--text-heading);
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .brand-text p {
+            font-size: 0.76rem;
+            color: var(--ocean-blue);
+            font-weight: 700;
+            letter-spacing: 0.6px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-nav {
+            padding: 9px 18px;
+            border-radius: 9999px;
+            border: 1.5px solid var(--border-soft);
+            background: #ffffff;
+            color: var(--text-heading);
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+            text-decoration: none;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            border-color: var(--ocean-sky);
+            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.15);
+        }
+
+        .btn-radio {
+            background: linear-gradient(135deg, #fff7ed, #ffedd5);
+            border-color: rgba(255, 107, 0, 0.35);
+            color: var(--kaohsiung-sun);
+        }
+
+        .btn-radio.playing {
+            background: linear-gradient(135deg, #ff6b00, #f59e0b);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.4);
+        }
+
+        .btn-gacha {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-color: rgba(2, 132, 199, 0.35);
+            color: var(--ocean-blue);
+        }
+
+        .btn-gacha:hover {
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            color: #fff;
+            border-color: transparent;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 44px 24px 30px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.12fr 0.88fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badges-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .hero-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1.5px solid rgba(255, 107, 0, 0.3);
+            border-radius: 9999px;
+            color: var(--kaohsiung-sun);
+            font-size: 0.85rem;
+            font-weight: 800;
+            box-shadow: 0 3px 10px rgba(255, 107, 0, 0.08);
+        }
+
+        .hero-pill.blue {
+            border-color: rgba(2, 132, 199, 0.3);
+            color: var(--ocean-blue);
+        }
+
+        .hero-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 18px;
+            color: #0f172a;
+        }
+
+        .hero-title .highlight-sun {
+            background: linear-gradient(135deg, #ff6b00 20%, #f59e0b 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero-title .highlight-ocean {
+            background: linear-gradient(135deg, #0284c7 20%, #06b6d4 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero-desc {
+            font-size: 1.08rem;
+            color: var(--text-body);
+            margin-bottom: 28px;
+            line-height: 1.8;
+            max-width: 660px;
+        }
+
+        /* Bento Stats Grid */
+        .bento-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 2px solid rgba(2, 132, 199, 0.12);
+            border-radius: var(--radius-md);
+            padding: 16px 14px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.06);
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8, #ff6b00);
+            opacity: 0.8;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 107, 0, 0.4);
+            box-shadow: 0 14px 28px rgba(255, 107, 0, 0.15);
+        }
+
+        .stat-num {
+            font-family: 'Fredoka', cursive, sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            line-height: 1.15;
+        }
+
+        .stat-num.orange {
+            background: linear-gradient(135deg, #ff6b00, #ffb703);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-num.coral {
+            background: linear-gradient(135deg, #f43f5e, #fb7185);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            font-weight: 700;
+        }
+
+        /* Hero Media Frame (Sunny Polaroid / Widescreen Poster) */
+        .hero-media {
+            position: relative;
+        }
+
+        .hero-frame-container {
+            background: #ffffff;
+            padding: 16px 16px 28px 16px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 45px rgba(2, 132, 199, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.05);
+            transform: rotate(1.5deg);
+            transition: all 0.35s ease;
+            position: relative;
+        }
+
+        .hero-frame-container:hover {
+            transform: rotate(0deg) scale(1.02);
+            box-shadow: 0 28px 55px rgba(255, 107, 0, 0.22);
+        }
+
+        /* Washi Tape Effect */
+        .washi-tape {
+            position: absolute;
+            top: -14px;
+            left: 36%;
+            width: 130px;
+            height: 32px;
+            background: rgba(255, 214, 10, 0.75);
+            backdrop-filter: blur(4px);
+            border: 1px dashed rgba(245, 158, 11, 0.6);
+            transform: rotate(-3deg);
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #b45309;
+            letter-spacing: 1px;
+        }
+
+        .hero-img-box {
+            width: 100%;
+            aspect-ratio: 4/3;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #e2e8f0;
+            position: relative;
+        }
+
+        .hero-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            display: block;
+        }
+
+        .hero-img-box:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-img-caption {
+            margin-top: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-img-caption h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-img-caption p {
+            font-size: 0.8rem;
+            color: var(--ocean-blue);
+            font-weight: 700;
+        }
+
+        /* Equalizer Wave in Header */
+        .eq-bar-wrap {
+            display: inline-flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 14px;
+        }
+        .eq-bar {
+            width: 3px;
+            background: #ff6b00;
+            border-radius: 2px;
+            animation: eq-anim 0.8s ease-in-out infinite alternate;
+        }
+        .eq-bar:nth-child(1) { height: 4px; animation-delay: 0.1s; }
+        .eq-bar:nth-child(2) { height: 13px; animation-delay: 0.3s; }
+        .eq-bar:nth-child(3) { height: 8px; animation-delay: 0.2s; }
+        .eq-bar:nth-child(4) { height: 14px; animation-delay: 0.4s; }
+        @keyframes eq-anim {
+            0% { height: 3px; }
+            100% { height: 14px; }
+        }
+
+        /* Itinerary Roadmap */
+        .timeline-section {
+            max-width: 1400px;
+            margin: 50px auto 30px;
+            padding: 0 24px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 34px;
+        }
+
+        .section-subtitle {
+            font-size: 0.88rem;
+            color: var(--kaohsiung-sun);
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2.3rem;
+            font-weight: 900;
+            color: var(--text-heading);
+        }
+
+        .itinerary-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .day-column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .day-header {
+            padding: 16px 22px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            border: 2px solid rgba(2, 132, 199, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 6px 16px rgba(2, 132, 199, 0.08);
+        }
+
+        .day-header.day2 {
+            background: linear-gradient(135deg, #ffedd5, #fed7aa);
+            border-color: rgba(255, 107, 0, 0.25);
+            box-shadow: 0 6px 16px rgba(255, 107, 0, 0.08);
+        }
+
+        .day-header h3 {
+            font-size: 1.18rem;
+            font-weight: 900;
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .day-header span {
+            font-size: 0.88rem;
+            color: var(--ocean-blue);
+            font-weight: 800;
+        }
+
+        .day-header.day2 span {
+            color: var(--kaohsiung-sun);
+        }
+
+        .spot-card {
+            background: #ffffff;
+            border: 2px solid var(--border-soft);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+            position: relative;
+        }
+
+        .spot-card:hover {
+            background: #ffffff;
+            border-color: var(--kaohsiung-sun);
+            transform: translateX(6px) translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .spot-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 1px solid rgba(2, 132, 199, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.1);
+        }
+
+        .spot-details {
+            flex: 1;
+        }
+
+        .spot-details h4 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .spot-badge-count {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 9999px;
+            background: rgba(2, 132, 199, 0.1);
+            color: var(--ocean-blue);
+            font-weight: 800;
+        }
+
+        .spot-details p {
+            font-size: 0.88rem;
+            color: var(--text-body);
+            line-height: 1.55;
+            margin-bottom: 8px;
+        }
+
+        .spot-fun-tag {
+            font-size: 0.76rem;
+            color: var(--kaohsiung-sun);
+            font-weight: 700;
+            background: #fff7ed;
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        /* Toolbar & Search Filter */
+        .gallery-section {
+            max-width: 1400px;
+            margin: 55px auto 40px;
+            padding: 0 24px;
+        }
+
+        .toolbar {
+            background: #ffffff;
+            border: 2px solid var(--border-soft);
+            border-radius: var(--radius-lg);
+            padding: 20px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .toolbar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 440px;
+        }
+
+        .search-input {
+            width: 100%;
+            background: #f8fafc;
+            border: 2px solid var(--border-soft);
+            border-radius: 9999px;
+            padding: 11px 20px 11px 44px;
+            font-size: 0.92rem;
+            color: var(--text-heading);
+            outline: none;
+            transition: all 0.25s ease;
+            font-weight: 600;
+        }
+
+        .search-input:focus {
+            border-color: var(--ocean-blue);
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(2, 132, 199, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        .view-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-tool {
+            padding: 9px 18px;
+            border-radius: 12px;
+            background: #f8fafc;
+            border: 2px solid var(--border-soft);
+            color: var(--text-heading);
+            font-size: 0.88rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-tool:hover {
+            background: #ffffff;
+            border-color: var(--ocean-blue);
+            color: var(--ocean-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-tool.active {
+            background: linear-gradient(135deg, #ffedd5, #fed7aa);
+            border-color: var(--kaohsiung-sun);
+            color: var(--kaohsiung-sun);
+        }
+
+        .toolbar-tags {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            padding: 8px 18px;
+            border-radius: 9999px;
+            border: 2px solid var(--border-soft);
+            background: #f8fafc;
+            color: var(--text-body);
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .pill-btn:hover {
+            background: #ffffff;
+            border-color: var(--ocean-blue);
+            color: var(--ocean-blue);
+            transform: translateY(-1px);
+        }
+
+        .pill-btn.active {
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            border-color: transparent;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+        }
+
+        .pill-btn.fav-pill.active {
+            background: linear-gradient(135deg, #f43f5e, #fb7185);
+            box-shadow: 0 4px 14px rgba(244, 63, 94, 0.35);
+        }
+
+        /* Photo Grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+            gap: 24px;
+        }
+
+        .photo-card {
+            position: relative;
+            background: #ffffff;
+            border: 2px solid rgba(2, 132, 199, 0.1);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            aspect-ratio: 4/3;
+            box-shadow: 0 8px 22px rgba(2, 132, 199, 0.07);
+        }
+
+        .photo-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--kaohsiung-sun);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            display: block;
+        }
+
+        .photo-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card-like-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 5;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1.5px solid rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-like-btn:hover {
+            transform: scale(1.2);
+            background: #ffffff;
+        }
+
+        .card-like-btn.liked {
+            color: #f43f5e;
+            border-color: #f43f5e;
+            background: #fff1f2;
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.3) 60%, transparent 100%);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 18px;
+            transition: opacity 0.25s ease;
+        }
+
+        .photo-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card-tag {
+            align-self: flex-start;
+            font-size: 0.74rem;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            color: #fff;
+            margin-bottom: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-tag.day2 {
+            background: linear-gradient(135deg, #ff6b00, #f59e0b);
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 4px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .card-sub {
+            font-size: 0.8rem;
+            color: #e2e8f0;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Polaroid Mode */
+        .photo-grid.polaroid-mode {
+            gap: 36px;
+        }
+
+        .photo-grid.polaroid-mode .photo-card {
+            aspect-ratio: auto;
+            background: #ffffff;
+            padding: 14px 14px 28px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .photo-grid.polaroid-mode .photo-card:nth-child(even) {
+            transform: rotate(-2deg);
+        }
+
+        .photo-grid.polaroid-mode .photo-card:nth-child(odd) {
+            transform: rotate(2deg);
+        }
+
+        .photo-grid.polaroid-mode .photo-card:hover {
+            transform: scale(1.06) rotate(0deg);
+            z-index: 10;
+            box-shadow: 0 24px 50px rgba(255, 107, 0, 0.25);
+            border-color: var(--kaohsiung-sun);
+        }
+
+        .photo-grid.polaroid-mode .photo-card img {
+            aspect-ratio: 4/3;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .photo-grid.polaroid-mode .card-overlay {
+            display: none;
+        }
+
+        .polaroid-caption {
+            display: none;
+            font-family: 'Caveat', cursive, sans-serif;
+            font-size: 1.4rem;
+            color: #0f172a;
+            text-align: center;
+            margin-top: 14px;
+            font-weight: 700;
+        }
+
+        .photo-grid.polaroid-mode .polaroid-caption {
+            display: block;
+        }
+
+        /* Lightbox Modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(20px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 1150px;
+            width: 100%;
+            max-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-img-wrapper {
+            position: relative;
+            max-width: 100%;
+            max-height: 72vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-img {
+            max-width: 100%;
+            max-height: 72vh;
+            border-radius: var(--radius-md);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(255, 255, 255, 0.2);
+            object-fit: contain;
+            background: #000;
+        }
+
+        .modal-footer {
+            margin-top: 16px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            padding: 16px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-info h3 {
+            font-size: 1.15rem;
+            color: var(--text-heading);
+            font-weight: 900;
+            margin-bottom: 2px;
+        }
+
+        .modal-info p {
+            font-size: 0.88rem;
+            color: var(--kaohsiung-sun);
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .modal-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .modal-btn {
+            padding: 9px 18px;
+            border-radius: 9999px;
+            background: #f1f5f9;
+            border: 1.5px solid var(--border-soft);
+            color: var(--text-heading);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .modal-btn:hover {
+            background: var(--ocean-blue);
+            color: #ffffff;
+            border-color: var(--ocean-blue);
+            transform: scale(1.04);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 1.8rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.2);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2010;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--coral-pink);
+            transform: rotate(90deg);
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: var(--ocean-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            cursor: pointer;
+            z-index: 2010;
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            border: none;
+            font-weight: 900;
+        }
+
+        .modal-nav:hover {
+            background: var(--kaohsiung-sun);
+            color: #ffffff;
+            transform: translateY(-50%) scale(1.12);
+        }
+
+        .modal-prev { left: 24px; }
+        .modal-next { right: 24px; }
+
+        /* Gacha Modal (Kaohsiung Sunny Style) */
+        .gacha-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2500;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(20px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .gacha-modal.active {
+            display: flex;
+        }
+
+        .gacha-box {
+            position: relative;
+            max-width: 480px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 24px 24px 32px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(255, 107, 0, 0.4);
+            text-align: center;
+            color: var(--text-heading);
+            transform: scale(0.9);
+            animation: gacha-pop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes gacha-pop {
+            to { transform: scale(1); }
+        }
+
+        .gacha-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b00, #f59e0b);
+            color: #fff;
+            padding: 5px 16px;
+            border-radius: 9999px;
+            font-size: 0.88rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            box-shadow: 0 4px 12px rgba(255, 107, 0, 0.3);
+        }
+
+        .gacha-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .gacha-quote {
+            font-family: 'Caveat', cursive, sans-serif;
+            font-size: 1.6rem;
+            color: var(--ocean-blue);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .gacha-desc {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.5;
+            margin-bottom: 22px;
+        }
+
+        .gacha-btn-roll {
+            padding: 12px 28px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #ff6b00, #ffb703);
+            color: #fff;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 22px rgba(255, 107, 0, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .gacha-btn-roll:hover {
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 12px 28px rgba(255, 107, 0, 0.55);
+        }
+
+        /* Guestbook Section (Pastel Sticky Notes) */
+        .guestbook-section {
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .guestbook-card {
+            background: #ffffff;
+            border: 2px solid var(--border-soft);
+            border-radius: var(--radius-xl);
+            padding: 40px 32px;
+            box-shadow: var(--shadow-sun);
+        }
+
+        .guestbook-form {
+            display: grid;
+            grid-template-columns: 1fr 2fr auto;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .form-input {
+            background: #f8fafc;
+            border: 2px solid var(--border-soft);
+            border-radius: 14px;
+            padding: 13px 20px;
+            font-size: 0.92rem;
+            color: var(--text-heading);
+            outline: none;
+            font-weight: 600;
+        }
+
+        .form-input:focus {
+            border-color: var(--kaohsiung-sun);
+            background: #ffffff;
+        }
+
+        .form-btn {
+            padding: 13px 28px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #ff6b00, #ffb703);
+            border: none;
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.98rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            box-shadow: 0 6px 18px rgba(255, 107, 0, 0.35);
+        }
+
+        .form-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(255, 107, 0, 0.5);
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+            gap: 20px;
+        }
+
+        .note-card {
+            background: #fefce8;
+            border: 1px solid rgba(234, 179, 8, 0.25);
+            border-radius: var(--radius-md);
+            padding: 20px 22px;
+            position: relative;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+            transform: rotate(-1deg);
+            transition: all 0.25s ease;
+        }
+
+        .note-card:nth-child(2n) {
+            background: #f0fdf4;
+            border-color: rgba(34, 197, 94, 0.25);
+            transform: rotate(1.5deg);
+        }
+
+        .note-card:nth-child(3n) {
+            background: #f0f9ff;
+            border-color: rgba(2, 132, 199, 0.2);
+            transform: rotate(-1.5deg);
+        }
+
+        .note-card:nth-child(4n) {
+            background: #fff1f2;
+            border-color: rgba(244, 63, 94, 0.2);
+            transform: rotate(1deg);
+        }
+
+        .note-card:hover {
+            transform: scale(1.04) rotate(0deg);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+            z-index: 5;
+        }
+
+        .note-quote {
+            font-size: 1.4rem;
+            color: var(--kaohsiung-sun);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .note-content {
+            font-size: 0.95rem;
+            color: var(--text-heading);
+            line-height: 1.6;
+            margin-bottom: 14px;
+            font-weight: 500;
+        }
+
+        .note-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .note-author {
+            color: var(--ocean-blue);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 2px solid var(--border-soft);
+            background: #ffffff;
+            padding: 48px 24px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 22px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg, #ffedd5, #fef3c7);
+            border: 1.5px solid rgba(255, 107, 0, 0.25);
+            font-weight: 800;
+            color: var(--kaohsiung-sun);
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #0f172a;
+            border: 2px solid var(--kaohsiung-sun);
+            border-radius: 14px;
+            padding: 13px 24px;
+            color: #ffffff;
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .itinerary-cards { grid-template-columns: 1fr; }
+            .guestbook-form { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title { font-size: 2.2rem; }
+            .bento-stats { grid-template-columns: repeat(2, 1fr); }
+            .nav-actions .btn-nav:not(.btn-radio):not(.btn-gacha) { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="brand-badge">5</div>
+                <div class="brand-text">
+                    <h1>305 班 畢業旅行紀念特刊 <span>☀️</span></h1>
+                    <p>KAOHSIUNG SUNNY YOUTH ・ 陽光・海風・青春正甜</p>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button id="radioToggle" class="btn-nav btn-radio" onclick="toggleRadio()">
+                    <span>🎵</span> <span id="radioLabel">港都海風旋律</span>
+                    <div class="eq-bar-wrap" id="eqWrap" style="display: none;">
+                        <div class="eq-bar"></div>
+                        <div class="eq-bar"></div>
+                        <div class="eq-bar"></div>
+                        <div class="eq-bar"></div>
+                    </div>
+                </button>
+                <button class="btn-nav btn-gacha" onclick="openGacha()">
+                    <span>🎲</span> 抽時光卡
+                </button>
+                <button class="btn-nav" onclick="toggleSlideshow()">
+                    <span>▶️</span> 幻燈片
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badges-row">
+                        <span class="hero-pill">☀️ 港都艷陽全糖登場</span>
+                        <span class="hero-pill blue">🌊 吹拂高雄港海風</span>
+                        <span class="hero-pill">⚓ 大港橋旋轉青春</span>
+                    </div>
+                    <h2 class="hero-title">
+                        大港海風吹不散的<span class="highlight-sun">青春</span>！<br>
+                        陽光、古堡與我們的 <span class="highlight-ocean">305</span>
+                    </h2>
+                    <p class="hero-desc">
+                        有一種熱情，叫南台灣的大太陽；有一種浪漫，叫大港橋上的海風！穿過故宮南院的至美橋、戴著粉紅救生衣勇闖四草水上亞馬遜、在安平古堡老街狂嗑白糖粿，再一路殺到高雄科工館與駁二大港橋。兩天一夜，305 班把全台灣最耀眼的陽光與歡笑，通通打包進最美的青春記憶裡！
+                    </p>
+
+                    <!-- Bento Stats -->
+                    <div class="bento-stats">
+                        <div class="stat-card">
+                            <span class="stat-num orange">2 天</span>
+                            <span class="stat-label">南台灣壯遊</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">8 處</span>
+                            <span class="stat-label">港都古都名勝</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num coral">147 幀</span>
+                            <span class="stat-label">全糖定格定照</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num orange">100%</span>
+                            <span class="stat-label">305 同窗真心</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Featured Image (Sunny Polaroid Frame) -->
+                <div class="hero-media">
+                    <div class="hero-frame-container">
+                        <div class="washi-tape">✨ 305 永遠的青春</div>
+                        <div class="hero-img-box">
+                            <img id="heroImg" src="https://drive.google.com/thumbnail?id=1DRAaJy2oVm1cBRCS-ruxF_Wrp8KDGeZL&sz=w1000" alt="305班高雄大港橋大同框">
+                        </div>
+                        <div class="hero-img-caption">
+                            <h3>⚓ 高雄港大港橋 ｜ 迎風大合照</h3>
+                            <p>晴空萬里 ｜ 全員到齊！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Itinerary Roadmap Section -->
+        <section class="timeline-section">
+            <div class="section-header">
+                <p class="section-subtitle">KAOHSIUNG & TAINAN ROADMAP</p>
+                <h3 class="section-title">兩天一夜・青春行腳時光軸</h3>
+            </div>
+
+            <div class="itinerary-cards">
+                <!-- Day 1 Column -->
+                <div class="day-column">
+                    <div class="day-header">
+                        <h3>☀️ DAY 1：藍天班服出擊！文化古都生態行</h3>
+                        <span>嘉義 ➔ 台南</span>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('啟程安全演練 ＆ 嘉銘通運專車')">
+                        <div class="spot-icon-box">🚌</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>啟程安全演練 ＆ 嘉銘通運</span>
+                                <span class="spot-badge-count">1 幀</span>
+                            </h4>
+                            <p>嘉銘通運 Mercedes-Benz AMG 專車 (KAA-6029) 前逃生安全演習，全班藍天羽翼班服全員蹲姿熱血啟程！</p>
+                            <span class="spot-fun-tag">#安全第一 #蓄勢待發 #出發啦</span>
+                        </div>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('嘉義・國立故宮博物院南部院區')">
+                        <div class="spot-icon-box">🏛️</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>嘉義・國立故宮博物院南部院區</span>
+                                <span class="spot-badge-count">44 幀</span>
+                            </h4>
+                            <p>漫步流線當代建築與至美橋，青花瓷大花瓶前全員合影，手持 5 號班牌與代持「家平」名牌——一個都不能少！</p>
+                            <span class="spot-fun-tag">#青花瓷大合照 #家平精神同在 #至美橋打卡</span>
+                        </div>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('台南・四草綠色隧道生態之舟')">
+                        <div class="spot-icon-box">🚣</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>台南・四草綠色隧道生態之舟</span>
+                                <span class="spot-badge-count">8 幀</span>
+                            </h4>
+                            <p>穿上亮眼粉紅救生衣搭乘觀光管筏，徜徉於「台灣袖珍亞馬遜」水上紅樹林秘境，水波倒影如詩如畫！</p>
+                            <span class="spot-fun-tag">#粉紅救生衣戰隊 #小心撞頭 #倒影美翻</span>
+                        </div>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('台南・安平古堡歷史巡禮 ＆ 老街')">
+                        <div class="spot-icon-box">🏰</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>台南・安平古堡巡禮 ＆ 老街</span>
+                                <span class="spot-badge-count">16 幀</span>
+                            </h4>
+                            <p>登古砲台俯瞰安平港，在「安平古堡」巍峨石碑與百年榕樹前全員挺拔合影，隨後安平老街美食掃蕩！</p>
+                            <span class="spot-fun-tag">#安平石碑合照 #熱蘭遮城 #吃貨老街大隊</span>
+                        </div>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('飯店歐式百匯晚宴 ＆ 歡聚夜聊')">
+                        <div class="spot-icon-box">🍽️</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>飯店歐式百匯晚宴 ＆ 歡聚夜聊</span>
+                                <span class="spot-badge-count">13 幀</span>
+                            </h4>
+                            <p>洗去一日疲憊，圍桌大啖牛排熱湯與甜點冰淇淋，十人一桌聊通宵，享受最溫馨歡樂的畢旅首夜！</p>
+                            <span class="spot-fun-tag">#吃到飽救贖 #夜聊真心話 #查房倒數</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 Column -->
+                <div class="day-column">
+                    <div class="day-header day2">
+                        <h3>🌊 DAY 2：潮流私服！港都科技 ＆ 駁二海風</h3>
+                        <span>高雄市區 ➔ 賦歸</span>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('晨光活力早點 ＆ 圓桌合菜午宴')">
+                        <div class="spot-icon-box">🍳</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>晨光早點 ＆ 澎湃合菜午宴</span>
+                                <span class="spot-badge-count">18 幀</span>
+                            </h4>
+                            <p>早晨中西自助吧充電；中午十人一桌澎湃合菜，轉盤轉得飛快，大家以茶代酒大聲歡呼乾杯！</p>
+                            <span class="spot-fun-tag">#晨光早餐 #合菜轉盤 #乾杯大師</span>
+                        </div>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('高雄・國立科學工藝博物館')">
+                        <div class="spot-icon-box">🚀</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>高雄・國立科學工藝博物館</span>
+                                <span class="spot-badge-count">29 幀</span>
+                            </h4>
+                            <p>換上潮流便裝展現自信！互動科學特展、動力太空體驗與巨型旋轉滑梯，展廳入口留下朝氣大合影！</p>
+                            <span class="spot-fun-tag">#科工館合照 #便服穿搭大賞 #太空漫遊</span>
+                        </div>
+                    </div>
+
+                    <div class="spot-card" onclick="filterBySpot('高雄・駁二藝術特區 ＆ 大港橋海風')">
+                        <div class="spot-icon-box">⚓</div>
+                        <div class="spot-details">
+                            <h4>
+                                <span>駁二藝術特區 ＆ 大港橋海風</span>
+                                <span class="spot-badge-count">18 幀</span>
+                            </h4>
+                            <p>迎著高雄港的海風，走上全台首座旋轉大港橋（Wharf No. 2），以白色橋身與蔚藍海天為背景留下畢旅最燦爛大同框！</p>
+                            <span class="spot-fun-tag">#大港橋全景同框 #港都海風 #青春終極定格</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filterable Photo Gallery -->
+        <section class="gallery-section" id="gallery">
+            <div class="section-header">
+                <p class="section-subtitle">PHOTO ARCHIVE</p>
+                <h3 class="section-title">時光留影・147 幀雲端相簿庫</h3>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <div class="toolbar-top">
+                    <!-- Search Input -->
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="searchInput" class="search-input" placeholder="搜尋景點、標籤、合照或照片名..." oninput="handleSearch()">
+                    </div>
+
+                    <!-- View Actions -->
+                    <div class="view-actions">
+                        <button id="togglePolaroid" class="btn-tool" onclick="togglePolaroidMode()">
+                            <span>📷</span> 拍立得模式
+                        </button>
+                        <button class="btn-tool" onclick="randomShuffle()">
+                            <span>🎲</span> 隨機時光穿梭
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tags / Pills -->
+                <div class="toolbar-tags">
+                    <button class="pill-btn active" onclick="filterGallery('all', this)">全部照片 (147)</button>
+                    <button class="pill-btn fav-pill" onclick="filterGallery('fav', this)">💖 我的珍藏 (<span id="favCount">0</span>)</button>
+                    <button class="pill-btn" onclick="filterGallery('day1', this)">第一天 (82)</button>
+                    <button class="pill-btn" onclick="filterGallery('day2', this)">第二天 (65)</button>
+                    <button class="pill-btn" onclick="filterGallery('group', this)">👥 大合照精華</button>
+                    <button class="pill-btn" onclick="filterGallery('故宮', this)">故宮南院</button>
+                    <button class="pill-btn" onclick="filterGallery('四草', this)">四草綠隧</button>
+                    <button class="pill-btn" onclick="filterGallery('安平', this)">安平古堡</button>
+                    <button class="pill-btn" onclick="filterGallery('科工館', this)">科工館</button>
+                    <button class="pill-btn" onclick="filterGallery('大港橋', this)">駁二大港橋</button>
+                    <button class="pill-btn" onclick="filterGallery('dining', this)">歡聚美食</button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="photo-grid" id="photoGrid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <!-- Interactive Guestbook Wall -->
+        <section class="guestbook-section">
+            <div class="guestbook-card">
+                <div class="section-header" style="margin-bottom: 24px;">
+                    <p class="section-subtitle">KAOHSIUNG MEMORY WALL</p>
+                    <h3 class="section-title">青春留言板 ｜ 寫下一抹同窗祝福</h3>
+                </div>
+
+                <!-- Form -->
+                <form class="guestbook-form" onsubmit="addMessage(event)">
+                    <input type="text" id="authorInput" class="form-input" placeholder="你的名字 / 綽號 (例: 305吃貨代表)" required>
+                    <input type="text" id="msgInput" class="form-input" placeholder="留下一句想對全班或畢旅說的話..." required>
+                    <button type="submit" class="form-btn">📌 送出留言</button>
+                </form>
+
+                <!-- Notes Grid -->
+                <div class="notes-grid" id="notesGrid">
+                    <!-- Notes generated by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-badge">
+                <span>🎓</span> 305 班 畢業旅行紀念委員會 謹製
+            </div>
+            <p>100% 雲端直連 147 幀珍貴回憶，免下載佔用本地硬碟空間，隨時隨地回味那段在南台灣大太陽下的閃耀青春！</p>
+            <p>© 305 班 同窗會 ｜ 願歷盡千帆，歸來仍是少年！</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="modal" id="lightboxModal" onclick="handleModalClick(event)">
+        <div class="modal-close" onclick="closeModal()">&times;</div>
+        <div class="modal-nav modal-prev" onclick="prevPhoto()">&larr;</div>
+        <div class="modal-nav modal-next" onclick="nextPhoto()">&rarr;</div>
+
+        <div class="modal-content">
+            <div class="modal-img-wrapper">
+                <img id="modalImg" class="modal-img" src="" alt="">
+            </div>
+            <div class="modal-footer">
+                <div class="modal-info">
+                    <h3 id="modalTitle">照片標題</h3>
+                    <p id="modalDesc">動人圖說與細節記錄</p>
+                </div>
+                <div class="modal-controls">
+                    <button id="modalLikeBtn" class="modal-btn" onclick="toggleLikeCurrent()">
+                        <span id="modalLikeIcon">🤍</span> 收藏
+                    </button>
+                    <a id="modalDownload" href="#" class="modal-btn" target="_blank" title="在新分頁開啟全解析度原圖">
+                        🔍 原圖
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gacha Modal (Kaohsiung Sunny Style) -->
+    <div class="gacha-modal" id="gachaModal" onclick="handleGachaModalClick(event)">
+        <div class="gacha-box">
+            <span class="gacha-badge" id="gachaBadge">☀️ 港都艷陽時光機</span>
+            <img id="gachaImg" class="gacha-img" src="" alt="">
+            <div id="gachaQuote" class="gacha-quote">「時光機轉動中...」</div>
+            <p id="gachaDesc" class="gacha-desc"></p>
+            <button class="gacha-btn-roll" onclick="rollGacha()">🎲 再抽一張！</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span id="toastMsg">提示訊息</span>
+    </div>
+
+    <!-- Script Data & Interactive Logic -->
+    <script>
+        const photosData = [{"id": "1P3ywcpGxVaW_reKEl_VDyg97NKGXghZH", "index": 1, "filename": "LINE_ALBUM_畢旅Day1_261027_1.jpg", "category": "Day1_01_消防演練", "day": 1, "spot": "啟程安全演練 ＆ 嘉銘通運專車", "location": "出發集合地 / 遊覽車前", "mood": "安全第一・蓄勢待發", "desc": "嘉銘通運專車前全班蹲姿預備！藍天班服一字排開，出發前安全第一，青春壯遊正式啟航！", "tags": ["安全第一", "嘉銘通運", "藍天班服", "啟程出發", "啟程", "全班蹲姿"], "thumb": "https://drive.google.com/thumbnail?id=1P3ywcpGxVaW_reKEl_VDyg97NKGXghZH&sz=w800", "full": "https://lh3.googleusercontent.com/d/1P3ywcpGxVaW_reKEl_VDyg97NKGXghZH", "width": 1477, "height": 1108}, {"id": "1vvVFbhbNIOuKPMyH8t8Vw_1REEztOUjO", "index": 2, "filename": "LINE_ALBUM_畢旅Day1_261027_10.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1vvVFbhbNIOuKPMyH8t8Vw_1REEztOUjO&sz=w800", "full": "https://lh3.googleusercontent.com/d/1vvVFbhbNIOuKPMyH8t8Vw_1REEztOUjO", "width": 1477, "height": 1108}, {"id": "1p9ssyq24piEzXYpx0BGCj8K62ziB6L6T", "index": 3, "filename": "LINE_ALBUM_畢旅Day1_261027_11.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1p9ssyq24piEzXYpx0BGCj8K62ziB6L6T&sz=w800", "full": "https://lh3.googleusercontent.com/d/1p9ssyq24piEzXYpx0BGCj8K62ziB6L6T", "width": 1477, "height": 1108}, {"id": "1_WLjhZcDXwltEuMCoCCj4oV2W95QXJve", "index": 4, "filename": "LINE_ALBUM_畢旅Day1_261027_12.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1_WLjhZcDXwltEuMCoCCj4oV2W95QXJve&sz=w800", "full": "https://lh3.googleusercontent.com/d/1_WLjhZcDXwltEuMCoCCj4oV2W95QXJve", "width": 1477, "height": 1108}, {"id": "14PlJR2m9d78J5tl8XwXkg5z3yqzRs-U0", "index": 5, "filename": "LINE_ALBUM_畢旅Day1_261027_13.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=14PlJR2m9d78J5tl8XwXkg5z3yqzRs-U0&sz=w800", "full": "https://lh3.googleusercontent.com/d/14PlJR2m9d78J5tl8XwXkg5z3yqzRs-U0", "width": 1477, "height": 1108}, {"id": "1UAghrF85DCTQjZQBPmvoYk4V0jAmQFYP", "index": 6, "filename": "LINE_ALBUM_畢旅Day1_261027_14.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1UAghrF85DCTQjZQBPmvoYk4V0jAmQFYP&sz=w800", "full": "https://lh3.googleusercontent.com/d/1UAghrF85DCTQjZQBPmvoYk4V0jAmQFYP", "width": 1477, "height": 1108}, {"id": "1lHZjYJBDuuOV8tJ-WXGjfT4RytfjB7gY", "index": 7, "filename": "LINE_ALBUM_畢旅Day1_261027_15.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1lHZjYJBDuuOV8tJ-WXGjfT4RytfjB7gY&sz=w800", "full": "https://lh3.googleusercontent.com/d/1lHZjYJBDuuOV8tJ-WXGjfT4RytfjB7gY", "width": 1477, "height": 1108}, {"id": "1IXZJ_-yyoH9JeiOEew2tn7_l9fWqARba", "index": 8, "filename": "LINE_ALBUM_畢旅Day1_261027_16.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1IXZJ_-yyoH9JeiOEew2tn7_l9fWqARba&sz=w800", "full": "https://lh3.googleusercontent.com/d/1IXZJ_-yyoH9JeiOEew2tn7_l9fWqARba", "width": 1477, "height": 1108}, {"id": "1QnI5LWsWzCj4Y_RadBWHRY9oTyG0b_Xb", "index": 9, "filename": "LINE_ALBUM_畢旅Day1_261027_17.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1QnI5LWsWzCj4Y_RadBWHRY9oTyG0b_Xb&sz=w800", "full": "https://lh3.googleusercontent.com/d/1QnI5LWsWzCj4Y_RadBWHRY9oTyG0b_Xb", "width": 1477, "height": 1108}, {"id": "15yDT6lu61WzUh79ux-X6W9G3D6zLD3J5", "index": 10, "filename": "LINE_ALBUM_畢旅Day1_261027_18.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=15yDT6lu61WzUh79ux-X6W9G3D6zLD3J5&sz=w800", "full": "https://lh3.googleusercontent.com/d/15yDT6lu61WzUh79ux-X6W9G3D6zLD3J5", "width": 1477, "height": 1108}, {"id": "1QdOaFTO2W26KMxxKSLHvgD7D74vnMW-m", "index": 11, "filename": "LINE_ALBUM_畢旅Day1_261027_19.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1QdOaFTO2W26KMxxKSLHvgD7D74vnMW-m&sz=w800", "full": "https://lh3.googleusercontent.com/d/1QdOaFTO2W26KMxxKSLHvgD7D74vnMW-m", "width": 1477, "height": 1108}, {"id": "1_jmgF0ohiszwkRw8fpPzLx2BbIT9huKr", "index": 12, "filename": "LINE_ALBUM_畢旅Day1_261027_2.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1_jmgF0ohiszwkRw8fpPzLx2BbIT9huKr&sz=w800", "full": "https://lh3.googleusercontent.com/d/1_jmgF0ohiszwkRw8fpPzLx2BbIT9huKr", "width": 1477, "height": 1108}, {"id": "17yXXCszSPOjPGnn3VFaHgK8jGJMKTaNV", "index": 13, "filename": "LINE_ALBUM_畢旅Day1_261027_20.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=17yXXCszSPOjPGnn3VFaHgK8jGJMKTaNV&sz=w800", "full": "https://lh3.googleusercontent.com/d/17yXXCszSPOjPGnn3VFaHgK8jGJMKTaNV", "width": 1477, "height": 1108}, {"id": "1Z-YE8SITDOv400AlWTtT6A5mT4wmhp_h", "index": 14, "filename": "LINE_ALBUM_畢旅Day1_261027_21.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1Z-YE8SITDOv400AlWTtT6A5mT4wmhp_h&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Z-YE8SITDOv400AlWTtT6A5mT4wmhp_h", "width": 1477, "height": 1108}, {"id": "1_01fUozgw2IEMxfDpjyEqKp3vtNJX8Hp", "index": 15, "filename": "LINE_ALBUM_畢旅Day1_261027_22.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1_01fUozgw2IEMxfDpjyEqKp3vtNJX8Hp&sz=w800", "full": "https://lh3.googleusercontent.com/d/1_01fUozgw2IEMxfDpjyEqKp3vtNJX8Hp", "width": 1477, "height": 1108}, {"id": "10ZY1Fm6V29Xw_96zkj-jLHdXIjOEOVzW", "index": 16, "filename": "LINE_ALBUM_畢旅Day1_261027_23.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=10ZY1Fm6V29Xw_96zkj-jLHdXIjOEOVzW&sz=w800", "full": "https://lh3.googleusercontent.com/d/10ZY1Fm6V29Xw_96zkj-jLHdXIjOEOVzW", "width": 1477, "height": 1108}, {"id": "19awoh4seEghuWWB679V6YVscqYiyN787", "index": 17, "filename": "LINE_ALBUM_畢旅Day1_261027_24.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=19awoh4seEghuWWB679V6YVscqYiyN787&sz=w800", "full": "https://lh3.googleusercontent.com/d/19awoh4seEghuWWB679V6YVscqYiyN787", "width": 1477, "height": 1108}, {"id": "1pQp13eztb1VXkCVvl-PfFEp_3-I3OMuQ", "index": 18, "filename": "LINE_ALBUM_畢旅Day1_261027_25.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1pQp13eztb1VXkCVvl-PfFEp_3-I3OMuQ&sz=w800", "full": "https://lh3.googleusercontent.com/d/1pQp13eztb1VXkCVvl-PfFEp_3-I3OMuQ", "width": 1477, "height": 1108}, {"id": "1ZmZcvoc8vTEyPt8zkBkx5c0vXUFnAcQL", "index": 19, "filename": "LINE_ALBUM_畢旅Day1_261027_26.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1ZmZcvoc8vTEyPt8zkBkx5c0vXUFnAcQL&sz=w800", "full": "https://lh3.googleusercontent.com/d/1ZmZcvoc8vTEyPt8zkBkx5c0vXUFnAcQL", "width": 1477, "height": 1108}, {"id": "1Q-eVUz1TTvSlwEbguONMyij4g5wql_2y", "index": 20, "filename": "LINE_ALBUM_畢旅Day1_261027_27.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1Q-eVUz1TTvSlwEbguONMyij4g5wql_2y&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Q-eVUz1TTvSlwEbguONMyij4g5wql_2y", "width": 1477, "height": 1108}, {"id": "1wBK3zOJMo-3thk3zBwfreBmFFcaZYGmZ", "index": 21, "filename": "LINE_ALBUM_畢旅Day1_261027_28.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1wBK3zOJMo-3thk3zBwfreBmFFcaZYGmZ&sz=w800", "full": "https://lh3.googleusercontent.com/d/1wBK3zOJMo-3thk3zBwfreBmFFcaZYGmZ", "width": 1477, "height": 1108}, {"id": "1DL-3Fx_PZQLrNZ4EAJpEK0c1xJahE_sg", "index": 22, "filename": "LINE_ALBUM_畢旅Day1_261027_29.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1DL-3Fx_PZQLrNZ4EAJpEK0c1xJahE_sg&sz=w800", "full": "https://lh3.googleusercontent.com/d/1DL-3Fx_PZQLrNZ4EAJpEK0c1xJahE_sg", "width": 1477, "height": 1108}, {"id": "1wzsE1vwUvkv_-i7X_Rl4IiPK995Fr-04", "index": 23, "filename": "LINE_ALBUM_畢旅Day1_261027_3.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1wzsE1vwUvkv_-i7X_Rl4IiPK995Fr-04&sz=w800", "full": "https://lh3.googleusercontent.com/d/1wzsE1vwUvkv_-i7X_Rl4IiPK995Fr-04", "width": 1477, "height": 1108}, {"id": "1WswcXdUwmjM1fgFmhEgUdvWuhD2o35kb", "index": 24, "filename": "LINE_ALBUM_畢旅Day1_261027_30.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1WswcXdUwmjM1fgFmhEgUdvWuhD2o35kb&sz=w800", "full": "https://lh3.googleusercontent.com/d/1WswcXdUwmjM1fgFmhEgUdvWuhD2o35kb", "width": 1477, "height": 1108}, {"id": "13Z11t0y-s4WKjhpIpgTlU0O9Mig-u9TV", "index": 25, "filename": "LINE_ALBUM_畢旅Day1_261027_31.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=13Z11t0y-s4WKjhpIpgTlU0O9Mig-u9TV&sz=w800", "full": "https://lh3.googleusercontent.com/d/13Z11t0y-s4WKjhpIpgTlU0O9Mig-u9TV", "width": 1477, "height": 1108}, {"id": "13XumAb4D1aDtqASceB8Tw8dOl4zWkmPG", "index": 26, "filename": "LINE_ALBUM_畢旅Day1_261027_33.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=13XumAb4D1aDtqASceB8Tw8dOl4zWkmPG&sz=w800", "full": "https://lh3.googleusercontent.com/d/13XumAb4D1aDtqASceB8Tw8dOl4zWkmPG", "width": 1477, "height": 1108}, {"id": "1gwFw6_UgzYqKIEv5rCfbhv2-WPYaUXh0", "index": 27, "filename": "LINE_ALBUM_畢旅Day1_261027_34.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1gwFw6_UgzYqKIEv5rCfbhv2-WPYaUXh0&sz=w800", "full": "https://lh3.googleusercontent.com/d/1gwFw6_UgzYqKIEv5rCfbhv2-WPYaUXh0", "width": 1477, "height": 1108}, {"id": "1CDr1AbJ32IiBG_i24bHLcC0Yy0fM7vhq", "index": 28, "filename": "LINE_ALBUM_畢旅Day1_261027_35.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1CDr1AbJ32IiBG_i24bHLcC0Yy0fM7vhq&sz=w800", "full": "https://lh3.googleusercontent.com/d/1CDr1AbJ32IiBG_i24bHLcC0Yy0fM7vhq", "width": 1477, "height": 1108}, {"id": "1bOU7uo3uvubZfFCAiLKGE0wLkQXmU0AK", "index": 29, "filename": "LINE_ALBUM_畢旅Day1_261027_36.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1bOU7uo3uvubZfFCAiLKGE0wLkQXmU0AK&sz=w800", "full": "https://lh3.googleusercontent.com/d/1bOU7uo3uvubZfFCAiLKGE0wLkQXmU0AK", "width": 1477, "height": 1108}, {"id": "1F0dzM2PFwHm2IX-AsVfvztstb4c38tdq", "index": 30, "filename": "LINE_ALBUM_畢旅Day1_261027_37.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "故宮南院青花瓷大花瓶前大合影！中間手舉5號班牌，左邊同學貼心代持「家平」名牌——305一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋", "靈魂合影", "大同框", "家平牌"], "thumb": "https://drive.google.com/thumbnail?id=1F0dzM2PFwHm2IX-AsVfvztstb4c38tdq&sz=w800", "full": "https://lh3.googleusercontent.com/d/1F0dzM2PFwHm2IX-AsVfvztstb4c38tdq", "width": 1477, "height": 1108}, {"id": "1L5AQewzgvOUZ3KfSbWhQZyDVrffHZNAh", "index": 31, "filename": "LINE_ALBUM_畢旅Day1_261027_38.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "故宮南院青花瓷大花瓶前大合影！中間手舉5號班牌，左邊同學貼心代持「家平」名牌——305一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋", "靈魂合影", "大同框", "家平牌"], "thumb": "https://drive.google.com/thumbnail?id=1L5AQewzgvOUZ3KfSbWhQZyDVrffHZNAh&sz=w800", "full": "https://lh3.googleusercontent.com/d/1L5AQewzgvOUZ3KfSbWhQZyDVrffHZNAh", "width": 1477, "height": 1108}, {"id": "1Gv0DBDNsdpJFzT5uICj1C6uX3CPDsx1V", "index": 32, "filename": "LINE_ALBUM_畢旅Day1_261027_39.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1Gv0DBDNsdpJFzT5uICj1C6uX3CPDsx1V&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Gv0DBDNsdpJFzT5uICj1C6uX3CPDsx1V", "width": 1477, "height": 1108}, {"id": "1Q9yfGocqu16XgnVq0xFLlrxmaF_q9hiE", "index": 33, "filename": "LINE_ALBUM_畢旅Day1_261027_4.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1Q9yfGocqu16XgnVq0xFLlrxmaF_q9hiE&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Q9yfGocqu16XgnVq0xFLlrxmaF_q9hiE", "width": 1477, "height": 1108}, {"id": "1KiEBAL2enjHUBfJIF0Ahf8pXlQphMk12", "index": 34, "filename": "LINE_ALBUM_畢旅Day1_261027_40.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1KiEBAL2enjHUBfJIF0Ahf8pXlQphMk12&sz=w800", "full": "https://lh3.googleusercontent.com/d/1KiEBAL2enjHUBfJIF0Ahf8pXlQphMk12", "width": 1477, "height": 1108}, {"id": "1-dsu0R8py4NYXN1mJ_CMDCQWmBMj_kQg", "index": 35, "filename": "LINE_ALBUM_畢旅Day1_261027_41.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1-dsu0R8py4NYXN1mJ_CMDCQWmBMj_kQg&sz=w800", "full": "https://lh3.googleusercontent.com/d/1-dsu0R8py4NYXN1mJ_CMDCQWmBMj_kQg", "width": 1477, "height": 1108}, {"id": "1CVLuZrP7DuJPW_gwv3UXQk7mCR4QAfWv", "index": 36, "filename": "LINE_ALBUM_畢旅Day1_261027_42.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1CVLuZrP7DuJPW_gwv3UXQk7mCR4QAfWv&sz=w800", "full": "https://lh3.googleusercontent.com/d/1CVLuZrP7DuJPW_gwv3UXQk7mCR4QAfWv", "width": 1477, "height": 1108}, {"id": "1PGKteOvFzIPvWYnGYfM8KEhb4VnFtNA6", "index": 37, "filename": "LINE_ALBUM_畢旅Day1_261027_43.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1PGKteOvFzIPvWYnGYfM8KEhb4VnFtNA6&sz=w800", "full": "https://lh3.googleusercontent.com/d/1PGKteOvFzIPvWYnGYfM8KEhb4VnFtNA6", "width": 1477, "height": 1108}, {"id": "1Bd5w2Qnkpai1H7aOIi3W2hSYrdefydka", "index": 38, "filename": "LINE_ALBUM_畢旅Day1_261027_44.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1Bd5w2Qnkpai1H7aOIi3W2hSYrdefydka&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Bd5w2Qnkpai1H7aOIi3W2hSYrdefydka", "width": 1477, "height": 1108}, {"id": "14zbUTu17CHNXOcuOb2GKI-NsNDtkI55x", "index": 39, "filename": "LINE_ALBUM_畢旅Day1_261027_45.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=14zbUTu17CHNXOcuOb2GKI-NsNDtkI55x&sz=w800", "full": "https://lh3.googleusercontent.com/d/14zbUTu17CHNXOcuOb2GKI-NsNDtkI55x", "width": 1477, "height": 1108}, {"id": "1nbaQ25ogKnteu2-sbx0yWHE5eZfCCfVj", "index": 40, "filename": "LINE_ALBUM_畢旅Day1_261027_46.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1nbaQ25ogKnteu2-sbx0yWHE5eZfCCfVj&sz=w800", "full": "https://lh3.googleusercontent.com/d/1nbaQ25ogKnteu2-sbx0yWHE5eZfCCfVj", "width": 1477, "height": 1108}, {"id": "1hW3vXM8txtSNTXBxGfy3yoYn5qSTGTKR", "index": 41, "filename": "LINE_ALBUM_畢旅Day1_261027_5.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1hW3vXM8txtSNTXBxGfy3yoYn5qSTGTKR&sz=w800", "full": "https://lh3.googleusercontent.com/d/1hW3vXM8txtSNTXBxGfy3yoYn5qSTGTKR", "width": 1477, "height": 1108}, {"id": "1NZGB6J2VGSMBdqC5kDyv2ryrzSdYXKNk", "index": 42, "filename": "LINE_ALBUM_畢旅Day1_261027_6.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1NZGB6J2VGSMBdqC5kDyv2ryrzSdYXKNk&sz=w800", "full": "https://lh3.googleusercontent.com/d/1NZGB6J2VGSMBdqC5kDyv2ryrzSdYXKNk", "width": 1477, "height": 1108}, {"id": "1asnq5W563Osjkp1CadbJYbteCRiruefe", "index": 43, "filename": "LINE_ALBUM_畢旅Day1_261027_7.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1asnq5W563Osjkp1CadbJYbteCRiruefe&sz=w800", "full": "https://lh3.googleusercontent.com/d/1asnq5W563Osjkp1CadbJYbteCRiruefe", "width": 1477, "height": 1108}, {"id": "18d3m2XCCt9F4549Tep_lqWWq8bk-ykdo", "index": 44, "filename": "LINE_ALBUM_畢旅Day1_261027_8.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=18d3m2XCCt9F4549Tep_lqWWq8bk-ykdo&sz=w800", "full": "https://lh3.googleusercontent.com/d/18d3m2XCCt9F4549Tep_lqWWq8bk-ykdo", "width": 1477, "height": 1108}, {"id": "1BRQMSuNWxDJ4C0IU-pqtX196jocITs1W", "index": 45, "filename": "LINE_ALBUM_畢旅Day1_261027_9.jpg", "category": "Day1_02_故宮南院", "day": 1, "spot": "嘉義・國立故宮博物院南部院區", "location": "嘉義縣太保市", "mood": "青花瓷大合照・家平精神同在", "desc": "漫步流線當代建築與至美橋，亞洲織品展尋寶。青花瓷大花瓶前全員合影，手持5號班牌與家平名牌，一個都不能少！", "tags": ["故宮南院", "青花瓷大合照", "家平精神同在", "手舉5號班牌", "至美橋"], "thumb": "https://drive.google.com/thumbnail?id=1BRQMSuNWxDJ4C0IU-pqtX196jocITs1W&sz=w800", "full": "https://lh3.googleusercontent.com/d/1BRQMSuNWxDJ4C0IU-pqtX196jocITs1W", "width": 1477, "height": 1108}, {"id": "1klMZVcF8dAySRWtWd0A8wbSZCSdC-Z8L", "index": 46, "filename": "LINE_ALBUM_畢旅Day1_261027_58.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "安平古堡石碑前挺拔大合影！百年古榕枝葉扶疏，陽光正好，微風不燥，記錄下最自信的同窗笑顏！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃", "安平石碑", "霸氣側漏", "全班合照"], "thumb": "https://drive.google.com/thumbnail?id=1klMZVcF8dAySRWtWd0A8wbSZCSdC-Z8L&sz=w800", "full": "https://lh3.googleusercontent.com/d/1klMZVcF8dAySRWtWd0A8wbSZCSdC-Z8L", "width": 1477, "height": 1108}, {"id": "1wu5F3KMRoSfd39-VBlPQpVWCTJ_il-wr", "index": 47, "filename": "LINE_ALBUM_畢旅Day1_261027_59.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "安平古堡石碑前挺拔大合影！百年古榕枝葉扶疏，陽光正好，微風不燥，記錄下最自信的同窗笑顏！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃", "安平石碑", "霸氣側漏", "全班合照"], "thumb": "https://drive.google.com/thumbnail?id=1wu5F3KMRoSfd39-VBlPQpVWCTJ_il-wr&sz=w800", "full": "https://lh3.googleusercontent.com/d/1wu5F3KMRoSfd39-VBlPQpVWCTJ_il-wr", "width": 1477, "height": 1108}, {"id": "1_jzCMtswxTp06YRpb1q-ySvHxZe7LJA8", "index": 48, "filename": "LINE_ALBUM_畢旅Day1_261027_60.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1_jzCMtswxTp06YRpb1q-ySvHxZe7LJA8&sz=w800", "full": "https://lh3.googleusercontent.com/d/1_jzCMtswxTp06YRpb1q-ySvHxZe7LJA8", "width": 1477, "height": 1108}, {"id": "1ACTGaS00iQmkx4Cqife_UChGElOKUI68", "index": 49, "filename": "LINE_ALBUM_畢旅Day1_261027_61.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1ACTGaS00iQmkx4Cqife_UChGElOKUI68&sz=w800", "full": "https://lh3.googleusercontent.com/d/1ACTGaS00iQmkx4Cqife_UChGElOKUI68", "width": 1477, "height": 1108}, {"id": "1e0wEVgfZL-wNJqipB86LKxSGGWj2ptYr", "index": 50, "filename": "LINE_ALBUM_畢旅Day1_261027_62.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1e0wEVgfZL-wNJqipB86LKxSGGWj2ptYr&sz=w800", "full": "https://lh3.googleusercontent.com/d/1e0wEVgfZL-wNJqipB86LKxSGGWj2ptYr", "width": 1477, "height": 1108}, {"id": "1hbSVDiuttcceZ9E5Ih3hZCkDlvQmP9t-", "index": 51, "filename": "LINE_ALBUM_畢旅Day1_261027_63.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1hbSVDiuttcceZ9E5Ih3hZCkDlvQmP9t-&sz=w800", "full": "https://lh3.googleusercontent.com/d/1hbSVDiuttcceZ9E5Ih3hZCkDlvQmP9t-", "width": 1477, "height": 1108}, {"id": "1G4TNK7wqGROF1L_EgmZTzlNJrrU9NBZq", "index": 52, "filename": "LINE_ALBUM_畢旅Day1_261027_64.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1G4TNK7wqGROF1L_EgmZTzlNJrrU9NBZq&sz=w800", "full": "https://lh3.googleusercontent.com/d/1G4TNK7wqGROF1L_EgmZTzlNJrrU9NBZq", "width": 1477, "height": 1108}, {"id": "1SiAk4Bv8SJ-OWDgh-c3UCpq1qmx6uo4d", "index": 53, "filename": "LINE_ALBUM_畢旅Day1_261027_65.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1SiAk4Bv8SJ-OWDgh-c3UCpq1qmx6uo4d&sz=w800", "full": "https://lh3.googleusercontent.com/d/1SiAk4Bv8SJ-OWDgh-c3UCpq1qmx6uo4d", "width": 1477, "height": 1108}, {"id": "1W1EKugffftKnn5AiURFk-1hWrhE24JUZ", "index": 54, "filename": "LINE_ALBUM_畢旅Day1_261027_66.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1W1EKugffftKnn5AiURFk-1hWrhE24JUZ&sz=w800", "full": "https://lh3.googleusercontent.com/d/1W1EKugffftKnn5AiURFk-1hWrhE24JUZ", "width": 1477, "height": 1108}, {"id": "1504bSyvQ9Kn3r5L1wIcJUjFCU67Ceak8", "index": 55, "filename": "LINE_ALBUM_畢旅Day1_261027_67.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1504bSyvQ9Kn3r5L1wIcJUjFCU67Ceak8&sz=w800", "full": "https://lh3.googleusercontent.com/d/1504bSyvQ9Kn3r5L1wIcJUjFCU67Ceak8", "width": 1477, "height": 1108}, {"id": "1csrVSaUYwDGHLmjOi_HDENcLep70kwsD", "index": 56, "filename": "LINE_ALBUM_畢旅Day1_261027_68.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1csrVSaUYwDGHLmjOi_HDENcLep70kwsD&sz=w800", "full": "https://lh3.googleusercontent.com/d/1csrVSaUYwDGHLmjOi_HDENcLep70kwsD", "width": 1477, "height": 1108}, {"id": "1J_1qcRzkZvTz5bn5oEZY-MIQV0UHNbmb", "index": 57, "filename": "LINE_ALBUM_畢旅Day1_261027_69.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1J_1qcRzkZvTz5bn5oEZY-MIQV0UHNbmb&sz=w800", "full": "https://lh3.googleusercontent.com/d/1J_1qcRzkZvTz5bn5oEZY-MIQV0UHNbmb", "width": 1477, "height": 1108}, {"id": "1WWhmwGtqb0bjxJrKd28RJiVVnHfJrYmc", "index": 58, "filename": "LINE_ALBUM_畢旅Day1_261027_70.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1WWhmwGtqb0bjxJrKd28RJiVVnHfJrYmc&sz=w800", "full": "https://lh3.googleusercontent.com/d/1WWhmwGtqb0bjxJrKd28RJiVVnHfJrYmc", "width": 1477, "height": 1108}, {"id": "19-inWAARUllWDmGOn3G8S-cmL_yU4Tuy", "index": 59, "filename": "LINE_ALBUM_畢旅Day1_261027_71.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=19-inWAARUllWDmGOn3G8S-cmL_yU4Tuy&sz=w800", "full": "https://lh3.googleusercontent.com/d/19-inWAARUllWDmGOn3G8S-cmL_yU4Tuy", "width": 1477, "height": 1108}, {"id": "1Xo6tX1MuIr74IbHrYktrJ8vQcl4HcS_5", "index": 60, "filename": "LINE_ALBUM_畢旅Day1_261027_72.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=1Xo6tX1MuIr74IbHrYktrJ8vQcl4HcS_5&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Xo6tX1MuIr74IbHrYktrJ8vQcl4HcS_5", "width": 1477, "height": 1108}, {"id": "127qFMFSFgwkq8q9uRFZ69KG_xy7Tw0Y6", "index": 61, "filename": "LINE_ALBUM_畢旅Day1_261027_73.jpg", "category": "Day1_03_安平古堡", "day": 1, "spot": "台南・安平古堡歷史巡禮 ＆ 老街", "location": "台南市安平區", "mood": "熱蘭遮城霸氣留影・吃貨出動", "desc": "登古砲台俯瞰安平港，在巍峨的「安平古堡」石碑與百年榕樹前全員挺拔合影，隨後開啟安平老街美食掃蕩！", "tags": ["安平古堡", "熱蘭遮城", "石碑大同框", "安平老街", "白糖粿必吃"], "thumb": "https://drive.google.com/thumbnail?id=127qFMFSFgwkq8q9uRFZ69KG_xy7Tw0Y6&sz=w800", "full": "https://lh3.googleusercontent.com/d/127qFMFSFgwkq8q9uRFZ69KG_xy7Tw0Y6", "width": 1477, "height": 1108}, {"id": "1QTXYAyGNWX0RLXpqqfy6oWJ3nFrMwm0J", "index": 62, "filename": "LINE_ALBUM_畢旅Day1_261027_50.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "四草水上亞馬遜出航！全員粉紅救生衣超吸睛，穿梭在海茄苳與水筆仔綠色穹頂下，整艘船都是歡呼聲！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影", "綠色隧道", "粉紅戰隊", "水上漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1QTXYAyGNWX0RLXpqqfy6oWJ3nFrMwm0J&sz=w800", "full": "https://lh3.googleusercontent.com/d/1QTXYAyGNWX0RLXpqqfy6oWJ3nFrMwm0J", "width": 1477, "height": 1108}, {"id": "1Ei3mgDWMLQX3S3kVO78l8JERTjITdQQ-", "index": 63, "filename": "LINE_ALBUM_畢旅Day1_261027_51.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "全班穿上粉紅救生衣搭乘觀光管筏，徜徉於水上紅樹林秘境。水筆仔海茄苳從頭頂掠過，水波倒影美不勝收！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影"], "thumb": "https://drive.google.com/thumbnail?id=1Ei3mgDWMLQX3S3kVO78l8JERTjITdQQ-&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Ei3mgDWMLQX3S3kVO78l8JERTjITdQQ-", "width": 1477, "height": 1108}, {"id": "1wEEujTUUGb9h102NRNXnm99mkPln93kW", "index": 64, "filename": "LINE_ALBUM_畢旅Day1_261027_52.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "全班穿上粉紅救生衣搭乘觀光管筏，徜徉於水上紅樹林秘境。水筆仔海茄苳從頭頂掠過，水波倒影美不勝收！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影"], "thumb": "https://drive.google.com/thumbnail?id=1wEEujTUUGb9h102NRNXnm99mkPln93kW&sz=w800", "full": "https://lh3.googleusercontent.com/d/1wEEujTUUGb9h102NRNXnm99mkPln93kW", "width": 1477, "height": 1108}, {"id": "1gdNP_7Y5fr7-aYZc_TW27nrQqj9bcehQ", "index": 65, "filename": "LINE_ALBUM_畢旅Day1_261027_53.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "全班穿上粉紅救生衣搭乘觀光管筏，徜徉於水上紅樹林秘境。水筆仔海茄苳從頭頂掠過，水波倒影美不勝收！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影"], "thumb": "https://drive.google.com/thumbnail?id=1gdNP_7Y5fr7-aYZc_TW27nrQqj9bcehQ&sz=w800", "full": "https://lh3.googleusercontent.com/d/1gdNP_7Y5fr7-aYZc_TW27nrQqj9bcehQ", "width": 1477, "height": 1108}, {"id": "1mh4yZ-ixqKGlGkvhXqD40ZO1smwuk1x-", "index": 66, "filename": "LINE_ALBUM_畢旅Day1_261027_54.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "全班穿上粉紅救生衣搭乘觀光管筏，徜徉於水上紅樹林秘境。水筆仔海茄苳從頭頂掠過，水波倒影美不勝收！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影"], "thumb": "https://drive.google.com/thumbnail?id=1mh4yZ-ixqKGlGkvhXqD40ZO1smwuk1x-&sz=w800", "full": "https://lh3.googleusercontent.com/d/1mh4yZ-ixqKGlGkvhXqD40ZO1smwuk1x-", "width": 1477, "height": 1108}, {"id": "1UIxAMY9-gJg7SadG8wRteX11TI9B4Wss", "index": 67, "filename": "LINE_ALBUM_畢旅Day1_261027_55.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "全班穿上粉紅救生衣搭乘觀光管筏，徜徉於水上紅樹林秘境。水筆仔海茄苳從頭頂掠過，水波倒影美不勝收！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影"], "thumb": "https://drive.google.com/thumbnail?id=1UIxAMY9-gJg7SadG8wRteX11TI9B4Wss&sz=w800", "full": "https://lh3.googleusercontent.com/d/1UIxAMY9-gJg7SadG8wRteX11TI9B4Wss", "width": 1477, "height": 1108}, {"id": "1-7hct1shPoc0WGTAKzWKge5nv0VohoXl", "index": 68, "filename": "LINE_ALBUM_畢旅Day1_261027_56.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "全班穿上粉紅救生衣搭乘觀光管筏，徜徉於水上紅樹林秘境。水筆仔海茄苳從頭頂掠過，水波倒影美不勝收！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影"], "thumb": "https://drive.google.com/thumbnail?id=1-7hct1shPoc0WGTAKzWKge5nv0VohoXl&sz=w800", "full": "https://lh3.googleusercontent.com/d/1-7hct1shPoc0WGTAKzWKge5nv0VohoXl", "width": 1477, "height": 1108}, {"id": "1FU-pgxy26WtJ1kaArVNjxDwCNM6tTn4a", "index": 69, "filename": "LINE_ALBUM_畢旅Day1_261027_57.jpg", "category": "Day1_04_台江國家公園", "day": 1, "spot": "台南・四草綠色隧道生態之舟", "location": "台南市安南區", "mood": "袖珍亞馬遜・粉紅救生衣戰隊", "desc": "全班穿上粉紅救生衣搭乘觀光管筏，徜徉於水上紅樹林秘境。水筆仔海茄苳從頭頂掠過，水波倒影美不勝收！", "tags": ["四草綠隧", "粉紅救生衣", "台灣亞馬遜", "小心撞頭", "水上倒影"], "thumb": "https://drive.google.com/thumbnail?id=1FU-pgxy26WtJ1kaArVNjxDwCNM6tTn4a&sz=w800", "full": "https://lh3.googleusercontent.com/d/1FU-pgxy26WtJ1kaArVNjxDwCNM6tTn4a", "width": 1477, "height": 1108}, {"id": "10L95299RlT8kOEtc6y2zeXmhEjdrkl_B", "index": 70, "filename": "IMG_1155.JPG", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=10L95299RlT8kOEtc6y2zeXmhEjdrkl_B&sz=w800", "full": "https://lh3.googleusercontent.com/d/10L95299RlT8kOEtc6y2zeXmhEjdrkl_B", "width": 5712, "height": 4284}, {"id": "1olgnfI7n4DA17AtFgpkRlzyPp8xDMMJU", "index": 71, "filename": "IMG_1156.JPG", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1olgnfI7n4DA17AtFgpkRlzyPp8xDMMJU&sz=w800", "full": "https://lh3.googleusercontent.com/d/1olgnfI7n4DA17AtFgpkRlzyPp8xDMMJU", "width": 5712, "height": 4284}, {"id": "1SZOoRCpeqJGpvlHBRKRoD46PUkMcXOeJ", "index": 72, "filename": "IMG_1157.JPG", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1SZOoRCpeqJGpvlHBRKRoD46PUkMcXOeJ&sz=w800", "full": "https://lh3.googleusercontent.com/d/1SZOoRCpeqJGpvlHBRKRoD46PUkMcXOeJ", "width": 5712, "height": 4284}, {"id": "1eqSWbKiRD3HSWhl7F6PPiOCd-Ds-6400", "index": 73, "filename": "LINE_ALBUM_畢旅Day1_261027_47.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1eqSWbKiRD3HSWhl7F6PPiOCd-Ds-6400&sz=w800", "full": "https://lh3.googleusercontent.com/d/1eqSWbKiRD3HSWhl7F6PPiOCd-Ds-6400", "width": 1477, "height": 1108}, {"id": "1zMgBi1JaHzZ6BtwF_C8y5ewhJButZP9a", "index": 74, "filename": "LINE_ALBUM_畢旅Day1_261027_48.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1zMgBi1JaHzZ6BtwF_C8y5ewhJButZP9a&sz=w800", "full": "https://lh3.googleusercontent.com/d/1zMgBi1JaHzZ6BtwF_C8y5ewhJButZP9a", "width": 1477, "height": 1108}, {"id": "1VMtkXE3y2JE_Qtw-TeNodqDwUaf_WJn5", "index": 75, "filename": "LINE_ALBUM_畢旅Day1_261027_49.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1VMtkXE3y2JE_Qtw-TeNodqDwUaf_WJn5&sz=w800", "full": "https://lh3.googleusercontent.com/d/1VMtkXE3y2JE_Qtw-TeNodqDwUaf_WJn5", "width": 1477, "height": 1108}, {"id": "1jAM13r6ToO8SHqD-kPWtuyJmbzEeWgGc", "index": 76, "filename": "LINE_ALBUM_畢旅Day1_261027_74.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "第一天飯店自助晚宴！走了一整天路後的極致救贖，滿盤美味熱食，一邊吃一邊回味白天的搞笑瞬間！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜", "晚宴吃到飽", "同窗圍桌", "甜點冰淇淋"], "thumb": "https://drive.google.com/thumbnail?id=1jAM13r6ToO8SHqD-kPWtuyJmbzEeWgGc&sz=w800", "full": "https://lh3.googleusercontent.com/d/1jAM13r6ToO8SHqD-kPWtuyJmbzEeWgGc", "width": 1477, "height": 1108}, {"id": "1i0QtHxmp5R3Wja7vfEVN3VsSaoEYQ_od", "index": 77, "filename": "LINE_ALBUM_畢旅Day1_261027_75.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1i0QtHxmp5R3Wja7vfEVN3VsSaoEYQ_od&sz=w800", "full": "https://lh3.googleusercontent.com/d/1i0QtHxmp5R3Wja7vfEVN3VsSaoEYQ_od", "width": 1477, "height": 1108}, {"id": "1l9gyyHytsNL2oGw0qc4LCUyd0lx4BiKH", "index": 78, "filename": "LINE_ALBUM_畢旅Day1_261027_76.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1l9gyyHytsNL2oGw0qc4LCUyd0lx4BiKH&sz=w800", "full": "https://lh3.googleusercontent.com/d/1l9gyyHytsNL2oGw0qc4LCUyd0lx4BiKH", "width": 1477, "height": 1108}, {"id": "1oxt2PdN0wT4MAg0wehA-sLNP08MP8ih6", "index": 79, "filename": "LINE_ALBUM_畢旅Day1_261027_77.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1oxt2PdN0wT4MAg0wehA-sLNP08MP8ih6&sz=w800", "full": "https://lh3.googleusercontent.com/d/1oxt2PdN0wT4MAg0wehA-sLNP08MP8ih6", "width": 1477, "height": 1108}, {"id": "1GM7eIgiJpWWtKkRjniQafFtiZhuF9uyU", "index": 80, "filename": "LINE_ALBUM_畢旅Day1_261027_78.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1GM7eIgiJpWWtKkRjniQafFtiZhuF9uyU&sz=w800", "full": "https://lh3.googleusercontent.com/d/1GM7eIgiJpWWtKkRjniQafFtiZhuF9uyU", "width": 1477, "height": 1108}, {"id": "13UtqOpTVhnTYIYI54OK6ZCfHN52q3NMD", "index": 81, "filename": "LINE_ALBUM_畢旅Day1_261027_79.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=13UtqOpTVhnTYIYI54OK6ZCfHN52q3NMD&sz=w800", "full": "https://lh3.googleusercontent.com/d/13UtqOpTVhnTYIYI54OK6ZCfHN52q3NMD", "width": 1477, "height": 1108}, {"id": "1kho4wEizVV96tuy3I7z44OQT97Xlap7Y", "index": 82, "filename": "LINE_ALBUM_畢旅Day1_261027_80.jpg", "category": "Day1_05_Day1用餐", "day": 1, "spot": "飯店歐式百匯晚宴 ＆ 歡聚夜聊", "location": "飯店精緻景觀餐廳", "mood": "百匯吃到飽・夜聊真心話", "desc": "洗去整天旅途疲憊，在精緻自助百匯圍桌大啖牛排熱湯與冰淇淋，十人一桌聊通宵，畢旅第一夜嗨翻天！", "tags": ["歐式百匯", "美食吃到飽", "同窗圍桌", "夜聊時光", "第一夜"], "thumb": "https://drive.google.com/thumbnail?id=1kho4wEizVV96tuy3I7z44OQT97Xlap7Y&sz=w800", "full": "https://lh3.googleusercontent.com/d/1kho4wEizVV96tuy3I7z44OQT97Xlap7Y", "width": 1477, "height": 1108}, {"id": "1meN8t0wG_2OitErtUed8kiYMNaIrC2Mh", "index": 83, "filename": "LINE_ALBUM_畢旅Day2_261027_16.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1meN8t0wG_2OitErtUed8kiYMNaIrC2Mh&sz=w800", "full": "https://lh3.googleusercontent.com/d/1meN8t0wG_2OitErtUed8kiYMNaIrC2Mh", "width": 1477, "height": 1108}, {"id": "13fr9-HKBOxUdOtZJhR6q4lYj_Dl79QQp", "index": 84, "filename": "LINE_ALBUM_畢旅Day2_261027_17.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=13fr9-HKBOxUdOtZJhR6q4lYj_Dl79QQp&sz=w800", "full": "https://lh3.googleusercontent.com/d/13fr9-HKBOxUdOtZJhR6q4lYj_Dl79QQp", "width": 1477, "height": 1108}, {"id": "1-53e2t227-dToc5JSERAI_ZRkVHDG58O", "index": 85, "filename": "LINE_ALBUM_畢旅Day2_261027_18.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1-53e2t227-dToc5JSERAI_ZRkVHDG58O&sz=w800", "full": "https://lh3.googleusercontent.com/d/1-53e2t227-dToc5JSERAI_ZRkVHDG58O", "width": 1477, "height": 1108}, {"id": "1NJvZ30P-RaihlqbxaZ2pG07TuJFHUPH8", "index": 86, "filename": "LINE_ALBUM_畢旅Day2_261027_19.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1NJvZ30P-RaihlqbxaZ2pG07TuJFHUPH8&sz=w800", "full": "https://lh3.googleusercontent.com/d/1NJvZ30P-RaihlqbxaZ2pG07TuJFHUPH8", "width": 1477, "height": 1108}, {"id": "1w1k-u1T4PoyCQscrYHcpxsru7iogch_X", "index": 87, "filename": "LINE_ALBUM_畢旅Day2_261027_20.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1w1k-u1T4PoyCQscrYHcpxsru7iogch_X&sz=w800", "full": "https://lh3.googleusercontent.com/d/1w1k-u1T4PoyCQscrYHcpxsru7iogch_X", "width": 1477, "height": 1108}, {"id": "1mVDKkjXa0v5jzlUmq2v0WfF79PC-4o8n", "index": 88, "filename": "LINE_ALBUM_畢旅Day2_261027_21.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1mVDKkjXa0v5jzlUmq2v0WfF79PC-4o8n&sz=w800", "full": "https://lh3.googleusercontent.com/d/1mVDKkjXa0v5jzlUmq2v0WfF79PC-4o8n", "width": 1477, "height": 1108}, {"id": "1IW-0OSSOojJ3EqvaO0-05CbZf4cGiKCu", "index": 89, "filename": "LINE_ALBUM_畢旅Day2_261027_22.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1IW-0OSSOojJ3EqvaO0-05CbZf4cGiKCu&sz=w800", "full": "https://lh3.googleusercontent.com/d/1IW-0OSSOojJ3EqvaO0-05CbZf4cGiKCu", "width": 1477, "height": 1108}, {"id": "1N1qLTbI6GIkmU90EY7Fu_tw0qhOaGdgt", "index": 90, "filename": "LINE_ALBUM_畢旅Day2_261027_23.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1N1qLTbI6GIkmU90EY7Fu_tw0qhOaGdgt&sz=w800", "full": "https://lh3.googleusercontent.com/d/1N1qLTbI6GIkmU90EY7Fu_tw0qhOaGdgt", "width": 1477, "height": 1108}, {"id": "1Msn8cOrjsRwD983EeqHylh9F5xVO-0fk", "index": 91, "filename": "LINE_ALBUM_畢旅Day2_261027_24.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1Msn8cOrjsRwD983EeqHylh9F5xVO-0fk&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Msn8cOrjsRwD983EeqHylh9F5xVO-0fk", "width": 1477, "height": 1108}, {"id": "1kRs_NHsv1mLNVHVvzdxwJQvDq1Jid5V9", "index": 92, "filename": "LINE_ALBUM_畢旅Day2_261027_25.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1kRs_NHsv1mLNVHVvzdxwJQvDq1Jid5V9&sz=w800", "full": "https://lh3.googleusercontent.com/d/1kRs_NHsv1mLNVHVvzdxwJQvDq1Jid5V9", "width": 1477, "height": 1108}, {"id": "1nhiMOLswCjKYRRU7uDRcK4ufQK81hJFd", "index": 93, "filename": "LINE_ALBUM_畢旅Day2_261027_26.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1nhiMOLswCjKYRRU7uDRcK4ufQK81hJFd&sz=w800", "full": "https://lh3.googleusercontent.com/d/1nhiMOLswCjKYRRU7uDRcK4ufQK81hJFd", "width": 1477, "height": 1108}, {"id": "1gx8hR8fvXd1NKXwUzNOtH88nMqPhVawA", "index": 94, "filename": "LINE_ALBUM_畢旅Day2_261027_27.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1gx8hR8fvXd1NKXwUzNOtH88nMqPhVawA&sz=w800", "full": "https://lh3.googleusercontent.com/d/1gx8hR8fvXd1NKXwUzNOtH88nMqPhVawA", "width": 1477, "height": 1108}, {"id": "1Z7vcW75nXbvPWiVj6pq6o-aYCjBw4Kxf", "index": 95, "filename": "LINE_ALBUM_畢旅Day2_261027_28.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1Z7vcW75nXbvPWiVj6pq6o-aYCjBw4Kxf&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Z7vcW75nXbvPWiVj6pq6o-aYCjBw4Kxf", "width": 1477, "height": 1108}, {"id": "1krOGB8a3PRKOzY7M4qPGEFzGgHYmwf-t", "index": 96, "filename": "LINE_ALBUM_畢旅Day2_261027_29.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1krOGB8a3PRKOzY7M4qPGEFzGgHYmwf-t&sz=w800", "full": "https://lh3.googleusercontent.com/d/1krOGB8a3PRKOzY7M4qPGEFzGgHYmwf-t", "width": 1477, "height": 1108}, {"id": "1EdPty1XaLuypjTbskAlW0JfVuyhzlXpa", "index": 97, "filename": "LINE_ALBUM_畢旅Day2_261027_30.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1EdPty1XaLuypjTbskAlW0JfVuyhzlXpa&sz=w800", "full": "https://lh3.googleusercontent.com/d/1EdPty1XaLuypjTbskAlW0JfVuyhzlXpa", "width": 1477, "height": 1108}, {"id": "1twWnqKaNL3RlfFHTLOJj73Dl5YW819y6", "index": 98, "filename": "LINE_ALBUM_畢旅Day2_261027_31.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1twWnqKaNL3RlfFHTLOJj73Dl5YW819y6&sz=w800", "full": "https://lh3.googleusercontent.com/d/1twWnqKaNL3RlfFHTLOJj73Dl5YW819y6", "width": 1477, "height": 1108}, {"id": "1a-1qPPjQ4csAq-Ud3qmdfO75Rl0xnKCo", "index": 99, "filename": "LINE_ALBUM_畢旅Day2_261027_32.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1a-1qPPjQ4csAq-Ud3qmdfO75Rl0xnKCo&sz=w800", "full": "https://lh3.googleusercontent.com/d/1a-1qPPjQ4csAq-Ud3qmdfO75Rl0xnKCo", "width": 1477, "height": 1108}, {"id": "162-ZhWEaOA6gZ3CADcONr__dzbXaYle5", "index": 100, "filename": "LINE_ALBUM_畢旅Day2_261027_33.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "科工館展廳入口全員便裝同框！各顯神通的私服穿搭，手比5擺出最自信青春姿態！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊", "科工館合照", "私服穿搭", "自信滿分"], "thumb": "https://drive.google.com/thumbnail?id=162-ZhWEaOA6gZ3CADcONr__dzbXaYle5&sz=w800", "full": "https://lh3.googleusercontent.com/d/162-ZhWEaOA6gZ3CADcONr__dzbXaYle5", "width": 1477, "height": 1108}, {"id": "1VqenXx-vTEQONtE7FOG2MyuHp8Z66V7a", "index": 101, "filename": "LINE_ALBUM_畢旅Day2_261027_34.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1VqenXx-vTEQONtE7FOG2MyuHp8Z66V7a&sz=w800", "full": "https://lh3.googleusercontent.com/d/1VqenXx-vTEQONtE7FOG2MyuHp8Z66V7a", "width": 1477, "height": 1108}, {"id": "1AoebQ8H1_YVeEZuKVySnMe4eXuyuaxER", "index": 102, "filename": "LINE_ALBUM_畢旅Day2_261027_35.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1AoebQ8H1_YVeEZuKVySnMe4eXuyuaxER&sz=w800", "full": "https://lh3.googleusercontent.com/d/1AoebQ8H1_YVeEZuKVySnMe4eXuyuaxER", "width": 1477, "height": 1108}, {"id": "1m3WzkK1UGftJ-NVcbCuwJJ-YPF5kORra", "index": 103, "filename": "LINE_ALBUM_畢旅Day2_261027_36.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1m3WzkK1UGftJ-NVcbCuwJJ-YPF5kORra&sz=w800", "full": "https://lh3.googleusercontent.com/d/1m3WzkK1UGftJ-NVcbCuwJJ-YPF5kORra", "width": 1477, "height": 1108}, {"id": "1LlfABHtThqx9NI2nf3XLa6k1ZzPqmbT8", "index": 104, "filename": "LINE_ALBUM_畢旅Day2_261027_37.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1LlfABHtThqx9NI2nf3XLa6k1ZzPqmbT8&sz=w800", "full": "https://lh3.googleusercontent.com/d/1LlfABHtThqx9NI2nf3XLa6k1ZzPqmbT8", "width": 1477, "height": 1108}, {"id": "1-Vs5A4Uiw9KYxj3Cv0-haMwLK6k94hoW", "index": 105, "filename": "LINE_ALBUM_畢旅Day2_261027_38.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1-Vs5A4Uiw9KYxj3Cv0-haMwLK6k94hoW&sz=w800", "full": "https://lh3.googleusercontent.com/d/1-Vs5A4Uiw9KYxj3Cv0-haMwLK6k94hoW", "width": 1477, "height": 1108}, {"id": "1y2t4B7uOzAzpagULmQaZEbqRFsUdqqUX", "index": 106, "filename": "LINE_ALBUM_畢旅Day2_261027_39.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1y2t4B7uOzAzpagULmQaZEbqRFsUdqqUX&sz=w800", "full": "https://lh3.googleusercontent.com/d/1y2t4B7uOzAzpagULmQaZEbqRFsUdqqUX", "width": 1477, "height": 1108}, {"id": "1fHa0nNZqMXyq0xzlTd-k-bgHSlI71a6X", "index": 107, "filename": "LINE_ALBUM_畢旅Day2_261027_40.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1fHa0nNZqMXyq0xzlTd-k-bgHSlI71a6X&sz=w800", "full": "https://lh3.googleusercontent.com/d/1fHa0nNZqMXyq0xzlTd-k-bgHSlI71a6X", "width": 1477, "height": 1108}, {"id": "1tvds1ae_um0QI4om8gEawSzSUgzRbkEY", "index": 108, "filename": "LINE_ALBUM_畢旅Day2_261027_41.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1tvds1ae_um0QI4om8gEawSzSUgzRbkEY&sz=w800", "full": "https://lh3.googleusercontent.com/d/1tvds1ae_um0QI4om8gEawSzSUgzRbkEY", "width": 1477, "height": 1108}, {"id": "13z6reZ2jwbUonSXd99wD84uO5CKMXoJ-", "index": 109, "filename": "LINE_ALBUM_畢旅Day2_261027_42.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=13z6reZ2jwbUonSXd99wD84uO5CKMXoJ-&sz=w800", "full": "https://lh3.googleusercontent.com/d/13z6reZ2jwbUonSXd99wD84uO5CKMXoJ-", "width": 1477, "height": 1108}, {"id": "1HSPjsiaHnu7pHVHLXPTZ738OykqMSDK0", "index": 110, "filename": "LINE_ALBUM_畢旅Day2_261027_43.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "第二天換上各自時尚私服，在現代展館前留下活力大合影！互動科學、動力太空特展與巨型溜滑梯狂歡！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊"], "thumb": "https://drive.google.com/thumbnail?id=1HSPjsiaHnu7pHVHLXPTZ738OykqMSDK0&sz=w800", "full": "https://lh3.googleusercontent.com/d/1HSPjsiaHnu7pHVHLXPTZ738OykqMSDK0", "width": 1477, "height": 1108}, {"id": "1cDfBQtfvvXl1sWXAN0j6pbll2bMIE-QY", "index": 111, "filename": "LINE_ALBUM_畢旅Day2_261027_44.jpg", "category": "Day2_01_科工館", "day": 2, "spot": "高雄・國立科學工藝博物館", "location": "高雄市三民區", "mood": "便裝穿搭大賞・科普互動玩瘋", "desc": "科工館展廳入口全員便裝同框！各顯神通的私服穿搭，手比5擺出最自信青春姿態！", "tags": ["科工館", "便服穿搭", "科技大同框", "科普互動", "太空漫遊", "科工館合照", "私服穿搭", "自信滿分"], "thumb": "https://drive.google.com/thumbnail?id=1cDfBQtfvvXl1sWXAN0j6pbll2bMIE-QY&sz=w800", "full": "https://lh3.googleusercontent.com/d/1cDfBQtfvvXl1sWXAN0j6pbll2bMIE-QY", "width": 1477, "height": 1108}, {"id": "1Rdw3aGT1y2PBDUV-a93LWoGsfQgSKTp3", "index": 112, "filename": "IMG_1249.JPG", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1Rdw3aGT1y2PBDUV-a93LWoGsfQgSKTp3&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Rdw3aGT1y2PBDUV-a93LWoGsfQgSKTp3", "width": 3672, "height": 4896}, {"id": "1DRAaJy2oVm1cBRCS-ruxF_Wrp8KDGeZL", "index": 113, "filename": "LINE_ALBUM_畢旅Day2_261027_48.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "高雄港大港橋全景大合照！全台首座旋轉橋前，藍天、白橋、海風與 305 班最燦爛耀眼的同窗笑臉！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場", "大港橋大合照", "港都海風", "終極大同框", "全劇高潮"], "thumb": "https://drive.google.com/thumbnail?id=1DRAaJy2oVm1cBRCS-ruxF_Wrp8KDGeZL&sz=w800", "full": "https://lh3.googleusercontent.com/d/1DRAaJy2oVm1cBRCS-ruxF_Wrp8KDGeZL", "width": 1477, "height": 1108}, {"id": "1PQzR_IlT2Nypbno_ZTsT0_ZOOD-tHt8I", "index": 114, "filename": "LINE_ALBUM_畢旅Day2_261027_49.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "高雄港大港橋全景大合照！全台首座旋轉橋前，藍天、白橋、海風與 305 班最燦爛耀眼的同窗笑臉！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場", "大港橋大合照", "港都海風", "終極大同框", "全劇高潮"], "thumb": "https://drive.google.com/thumbnail?id=1PQzR_IlT2Nypbno_ZTsT0_ZOOD-tHt8I&sz=w800", "full": "https://lh3.googleusercontent.com/d/1PQzR_IlT2Nypbno_ZTsT0_ZOOD-tHt8I", "width": 1477, "height": 1108}, {"id": "1NLbGmYQd0MQzomfyYL5R8ODmVgigjW0e", "index": 115, "filename": "LINE_ALBUM_畢旅Day2_261027_50.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1NLbGmYQd0MQzomfyYL5R8ODmVgigjW0e&sz=w800", "full": "https://lh3.googleusercontent.com/d/1NLbGmYQd0MQzomfyYL5R8ODmVgigjW0e", "width": 1477, "height": 1108}, {"id": "1Mrabo8RWiyk8WDHtAFCArJ8nXG6O4HWm", "index": 116, "filename": "LINE_ALBUM_畢旅Day2_261027_51.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1Mrabo8RWiyk8WDHtAFCArJ8nXG6O4HWm&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Mrabo8RWiyk8WDHtAFCArJ8nXG6O4HWm", "width": 1477, "height": 1108}, {"id": "1FkOOzFhhIYptbdK-le7m_KQUwKXfCNx0", "index": 117, "filename": "LINE_ALBUM_畢旅Day2_261027_52.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1FkOOzFhhIYptbdK-le7m_KQUwKXfCNx0&sz=w800", "full": "https://lh3.googleusercontent.com/d/1FkOOzFhhIYptbdK-le7m_KQUwKXfCNx0", "width": 1477, "height": 1108}, {"id": "1ZUITQN6NXe6gOxGQgDjy0U23KxMjQJSm", "index": 118, "filename": "LINE_ALBUM_畢旅Day2_261027_53.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1ZUITQN6NXe6gOxGQgDjy0U23KxMjQJSm&sz=w800", "full": "https://lh3.googleusercontent.com/d/1ZUITQN6NXe6gOxGQgDjy0U23KxMjQJSm", "width": 1477, "height": 1108}, {"id": "1Pbw73cZ6dEpwNDNt1gGbDA9pePnUJqmP", "index": 119, "filename": "LINE_ALBUM_畢旅Day2_261027_54.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1Pbw73cZ6dEpwNDNt1gGbDA9pePnUJqmP&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Pbw73cZ6dEpwNDNt1gGbDA9pePnUJqmP", "width": 1477, "height": 1108}, {"id": "1nrMMZ-93H3NU6ub5KxXt4vnZamPjh0QH", "index": 120, "filename": "LINE_ALBUM_畢旅Day2_261027_55.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1nrMMZ-93H3NU6ub5KxXt4vnZamPjh0QH&sz=w800", "full": "https://lh3.googleusercontent.com/d/1nrMMZ-93H3NU6ub5KxXt4vnZamPjh0QH", "width": 1477, "height": 1108}, {"id": "16kT5bTicO0SqyQig5J3dNJd2aVPP4JnZ", "index": 121, "filename": "LINE_ALBUM_畢旅Day2_261027_56.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=16kT5bTicO0SqyQig5J3dNJd2aVPP4JnZ&sz=w800", "full": "https://lh3.googleusercontent.com/d/16kT5bTicO0SqyQig5J3dNJd2aVPP4JnZ", "width": 1108, "height": 1477}, {"id": "1aRYTEAchXwezQpgTQCx0d7n02dmkcsPD", "index": 122, "filename": "LINE_ALBUM_畢旅Day2_261027_57.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1aRYTEAchXwezQpgTQCx0d7n02dmkcsPD&sz=w800", "full": "https://lh3.googleusercontent.com/d/1aRYTEAchXwezQpgTQCx0d7n02dmkcsPD", "width": 1108, "height": 1477}, {"id": "1vSuPb6ZkrIV8DddhOBjU9Dj4rvvD03TI", "index": 123, "filename": "LINE_ALBUM_畢旅Day2_261027_58.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1vSuPb6ZkrIV8DddhOBjU9Dj4rvvD03TI&sz=w800", "full": "https://lh3.googleusercontent.com/d/1vSuPb6ZkrIV8DddhOBjU9Dj4rvvD03TI", "width": 1477, "height": 1108}, {"id": "1T2Iad80edyDP4TBFROtdvonjlNWdCZ-W", "index": 124, "filename": "LINE_ALBUM_畢旅Day2_261027_59.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1T2Iad80edyDP4TBFROtdvonjlNWdCZ-W&sz=w800", "full": "https://lh3.googleusercontent.com/d/1T2Iad80edyDP4TBFROtdvonjlNWdCZ-W", "width": 1477, "height": 1108}, {"id": "13zdaRIazdBoZlrdCaEIgiQpodoPeJlh_", "index": 125, "filename": "LINE_ALBUM_畢旅Day2_261027_60.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=13zdaRIazdBoZlrdCaEIgiQpodoPeJlh_&sz=w800", "full": "https://lh3.googleusercontent.com/d/13zdaRIazdBoZlrdCaEIgiQpodoPeJlh_", "width": 1477, "height": 1108}, {"id": "1a3nMlGIwa6xjLmTzEM3LaNzjqQIZBtrC", "index": 126, "filename": "LINE_ALBUM_畢旅Day2_261027_61.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1a3nMlGIwa6xjLmTzEM3LaNzjqQIZBtrC&sz=w800", "full": "https://lh3.googleusercontent.com/d/1a3nMlGIwa6xjLmTzEM3LaNzjqQIZBtrC", "width": 1477, "height": 1108}, {"id": "1xbpq_jZiDBahIDGNlMggxO-5e6w5J5CZ", "index": 127, "filename": "LINE_ALBUM_畢旅Day2_261027_62.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1xbpq_jZiDBahIDGNlMggxO-5e6w5J5CZ&sz=w800", "full": "https://lh3.googleusercontent.com/d/1xbpq_jZiDBahIDGNlMggxO-5e6w5J5CZ", "width": 1477, "height": 1108}, {"id": "1Wjb-OJ7t9vehlNxUTHgGQpYE7XTwM-H9", "index": 128, "filename": "LINE_ALBUM_畢旅Day2_261027_63.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1Wjb-OJ7t9vehlNxUTHgGQpYE7XTwM-H9&sz=w800", "full": "https://lh3.googleusercontent.com/d/1Wjb-OJ7t9vehlNxUTHgGQpYE7XTwM-H9", "width": 1477, "height": 1108}, {"id": "1PPnmmVrZtcbfikZoNpGsoaqWaYdCptlj", "index": 129, "filename": "LINE_ALBUM_畢旅Day2_261027_64.jpg", "category": "Day2_02_駁二旗津", "day": 2, "spot": "高雄・駁二藝術特區 ＆ 大港橋海風", "location": "高雄市鹽埕區 / 高雄港", "mood": "海風吹拂・旋轉橋終極同框", "desc": "漫步文創倉庫與裝置藝術，走上全台首座水平旋轉大港橋（Wharf No. 2），迎著港灣海風留下畢旅最燦爛大合照！", "tags": ["大港橋", "駁二特區", "港灣海風", "全景大合照", "青春不散場"], "thumb": "https://drive.google.com/thumbnail?id=1PPnmmVrZtcbfikZoNpGsoaqWaYdCptlj&sz=w800", "full": "https://lh3.googleusercontent.com/d/1PPnmmVrZtcbfikZoNpGsoaqWaYdCptlj", "width": 1477, "height": 1108}, {"id": "1P5_c5Fkt0FSumLazXjsrTF-lBQ5r7ISi", "index": 130, "filename": "LINE_ALBUM_畢旅Day2_261027_1.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1P5_c5Fkt0FSumLazXjsrTF-lBQ5r7ISi&sz=w800", "full": "https://lh3.googleusercontent.com/d/1P5_c5Fkt0FSumLazXjsrTF-lBQ5r7ISi", "width": 1477, "height": 1108}, {"id": "14foBY2K3xLGekGz5ZTxSv-LLMVjx2azp", "index": 131, "filename": "LINE_ALBUM_畢旅Day2_261027_10.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=14foBY2K3xLGekGz5ZTxSv-LLMVjx2azp&sz=w800", "full": "https://lh3.googleusercontent.com/d/14foBY2K3xLGekGz5ZTxSv-LLMVjx2azp", "width": 1477, "height": 1108}, {"id": "1tCRrYS1hSYnZXKl8zZfoxNF-i22etaQj", "index": 132, "filename": "LINE_ALBUM_畢旅Day2_261027_11.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1tCRrYS1hSYnZXKl8zZfoxNF-i22etaQj&sz=w800", "full": "https://lh3.googleusercontent.com/d/1tCRrYS1hSYnZXKl8zZfoxNF-i22etaQj", "width": 1477, "height": 1108}, {"id": "1wjH1FL3Rn0uquP52rYo4dX80U4ertJM7", "index": 133, "filename": "LINE_ALBUM_畢旅Day2_261027_12.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1wjH1FL3Rn0uquP52rYo4dX80U4ertJM7&sz=w800", "full": "https://lh3.googleusercontent.com/d/1wjH1FL3Rn0uquP52rYo4dX80U4ertJM7", "width": 1477, "height": 1108}, {"id": "1b15GrLt1selKMu_CdnCoiPGlTLVmUBpS", "index": 134, "filename": "LINE_ALBUM_畢旅Day2_261027_13.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1b15GrLt1selKMu_CdnCoiPGlTLVmUBpS&sz=w800", "full": "https://lh3.googleusercontent.com/d/1b15GrLt1selKMu_CdnCoiPGlTLVmUBpS", "width": 1477, "height": 1108}, {"id": "1DRVM08PaeSpOtYQf39Tl2y95hHbOgG3R", "index": 135, "filename": "LINE_ALBUM_畢旅Day2_261027_14.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1DRVM08PaeSpOtYQf39Tl2y95hHbOgG3R&sz=w800", "full": "https://lh3.googleusercontent.com/d/1DRVM08PaeSpOtYQf39Tl2y95hHbOgG3R", "width": 1477, "height": 1108}, {"id": "1vTRMwRys70p-m0ygtYGuqFlEVLKEcWiN", "index": 136, "filename": "LINE_ALBUM_畢旅Day2_261027_15.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1vTRMwRys70p-m0ygtYGuqFlEVLKEcWiN&sz=w800", "full": "https://lh3.googleusercontent.com/d/1vTRMwRys70p-m0ygtYGuqFlEVLKEcWiN", "width": 1477, "height": 1108}, {"id": "1vLefUgRohuSa-bFy6Iok4BIDvSPrgny-", "index": 137, "filename": "LINE_ALBUM_畢旅Day2_261027_2.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1vLefUgRohuSa-bFy6Iok4BIDvSPrgny-&sz=w800", "full": "https://lh3.googleusercontent.com/d/1vLefUgRohuSa-bFy6Iok4BIDvSPrgny-", "width": 1477, "height": 1108}, {"id": "1V1C8EaXI-cMlAoDCkh3wlxYLBIBuNSjO", "index": 138, "filename": "LINE_ALBUM_畢旅Day2_261027_3.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1V1C8EaXI-cMlAoDCkh3wlxYLBIBuNSjO&sz=w800", "full": "https://lh3.googleusercontent.com/d/1V1C8EaXI-cMlAoDCkh3wlxYLBIBuNSjO", "width": 1477, "height": 1108}, {"id": "1pwlkk4M3MswtwHq7jQXNWxKOTydpSzVU", "index": 139, "filename": "LINE_ALBUM_畢旅Day2_261027_4.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1pwlkk4M3MswtwHq7jQXNWxKOTydpSzVU&sz=w800", "full": "https://lh3.googleusercontent.com/d/1pwlkk4M3MswtwHq7jQXNWxKOTydpSzVU", "width": 1477, "height": 1108}, {"id": "1hSHpLTqzkOUOGQ54yxCPKKO2jq_2IhvL", "index": 140, "filename": "LINE_ALBUM_畢旅Day2_261027_45.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "高雄特色合菜午宴！十人圍坐大圓桌，熱騰騰的道地佳餚，轉盤轉起來，大家以茶代酒大聲乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常", "圓桌吃貨", "澎湃合菜", "舉杯乾杯"], "thumb": "https://drive.google.com/thumbnail?id=1hSHpLTqzkOUOGQ54yxCPKKO2jq_2IhvL&sz=w800", "full": "https://lh3.googleusercontent.com/d/1hSHpLTqzkOUOGQ54yxCPKKO2jq_2IhvL", "width": 1477, "height": 1108}, {"id": "1sKC6YHXXkRmDUB3PylgSMAGsfIxVtibz", "index": 141, "filename": "LINE_ALBUM_畢旅Day2_261027_46.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1sKC6YHXXkRmDUB3PylgSMAGsfIxVtibz&sz=w800", "full": "https://lh3.googleusercontent.com/d/1sKC6YHXXkRmDUB3PylgSMAGsfIxVtibz", "width": 1477, "height": 1108}, {"id": "1oh0HPqYLnWHfFoYlQpbAKmYWV2HDaiiE", "index": 142, "filename": "LINE_ALBUM_畢旅Day2_261027_47.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1oh0HPqYLnWHfFoYlQpbAKmYWV2HDaiiE&sz=w800", "full": "https://lh3.googleusercontent.com/d/1oh0HPqYLnWHfFoYlQpbAKmYWV2HDaiiE", "width": 1477, "height": 1108}, {"id": "1kFQ_373yWH5gKO_lhvpsamJSmfV575F0", "index": 143, "filename": "LINE_ALBUM_畢旅Day2_261027_5.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1kFQ_373yWH5gKO_lhvpsamJSmfV575F0&sz=w800", "full": "https://lh3.googleusercontent.com/d/1kFQ_373yWH5gKO_lhvpsamJSmfV575F0", "width": 1477, "height": 1108}, {"id": "1pczROL1ohS5MFl1DZsh3jj1f3t_gzJmW", "index": 144, "filename": "LINE_ALBUM_畢旅Day2_261027_6.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1pczROL1ohS5MFl1DZsh3jj1f3t_gzJmW&sz=w800", "full": "https://lh3.googleusercontent.com/d/1pczROL1ohS5MFl1DZsh3jj1f3t_gzJmW", "width": 1477, "height": 1108}, {"id": "1NdsTSycJH43RVHyVa8sceE2Rh-4ISsXS", "index": 145, "filename": "LINE_ALBUM_畢旅Day2_261027_7.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1NdsTSycJH43RVHyVa8sceE2Rh-4ISsXS&sz=w800", "full": "https://lh3.googleusercontent.com/d/1NdsTSycJH43RVHyVa8sceE2Rh-4ISsXS", "width": 1477, "height": 1108}, {"id": "1ksQapdxk73KiQlCerEI6gcTtk-lL54H3", "index": 146, "filename": "LINE_ALBUM_畢旅Day2_261027_8.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1ksQapdxk73KiQlCerEI6gcTtk-lL54H3&sz=w800", "full": "https://lh3.googleusercontent.com/d/1ksQapdxk73KiQlCerEI6gcTtk-lL54H3", "width": 1477, "height": 1108}, {"id": "1q2ijJ4nymABHS_98rl7Jj3plFNNAjSuX", "index": 147, "filename": "LINE_ALBUM_畢旅Day2_261027_9.jpg", "category": "Day2_03_Day2用餐", "day": 2, "spot": "晨光活力早點 ＆ 圓桌合菜午宴", "location": "飯店晨光餐廳 / 高雄特色餐廳", "mood": "元氣充電・十人合菜乾杯", "desc": "早晨中西自助吧活力滿點；中午十人一桌享用道地澎湃合菜，轉盤轉不停，以茶代酒笑鬧乾杯！", "tags": ["晨光早餐", "圓桌合菜", "澎湃台菜", "乾杯祝賀", "吃貨日常"], "thumb": "https://drive.google.com/thumbnail?id=1q2ijJ4nymABHS_98rl7Jj3plFNNAjSuX&sz=w800", "full": "https://lh3.googleusercontent.com/d/1q2ijJ4nymABHS_98rl7Jj3plFNNAjSuX", "width": 1477, "height": 1108}];
+        let displayedPhotos = [...photosData];
+        let currentFilter = 'all';
+        let isPolaroid = false;
+        let currentIndex = 0;
+        let isSlideshow = false;
+        let slideshowTimer = null;
+
+        // Likes / Favorites from LocalStorage
+        let likes = JSON.parse(localStorage.getItem('305_photo_likes') || '{}');
+        function updateFavCount() {
+            const count = Object.values(likes).filter(Boolean).length;
+            document.getElementById('favCount').innerText = count;
+        }
+
+        // Render Photo Grid
+        const grid = document.getElementById('photoGrid');
+        function renderGrid(list) {
+            displayedPhotos = list;
+            grid.innerHTML = '';
+            
+            if (list.length === 0) {
+                grid.innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: #64748b;">
+                        <div style="font-size: 2.8rem; margin-bottom: 12px;">🌊</div>
+                        <h3 style="color: #0f172a; font-size: 1.3rem;">沒有找到符合的照片</h3>
+                        <p style="font-size: 0.92rem; margin-top: 6px;">試試其他關鍵字，或點擊「全部照片」重新感受港都艷陽！</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.forEach((p, idx) => {
+                const card = document.createElement('div');
+                card.className = 'photo-card';
+                card.onclick = (e) => {
+                    if (e.target.closest('.card-like-btn')) return;
+                    openModal(idx);
+                };
+
+                const isDay2 = p.day === 2;
+                const tagClass = isDay2 ? 'card-tag day2' : 'card-tag';
+                const dayLabel = isDay2 ? 'Day 2' : 'Day 1';
+                const isLiked = !!likes[p.id];
+
+                card.innerHTML = `
+                    <div class="card-like-btn ${isLiked ? 'liked' : ''}" onclick="toggleLike('${p.id}', this)" title="加入收藏">
+                        ${isLiked ? '💖' : '🤍'}
+                    </div>
+                    <img src="${p.thumb}" alt="${p.spot}" loading="lazy" onerror="this.src='${p.full}'">
+                    <div class="card-overlay">
+                        <span class="${tagClass}">${dayLabel}・${p.spot.split('・').pop()}</span>
+                        <div class="card-title">${p.filename}</div>
+                        <div class="card-sub">${p.desc}</div>
+                    </div>
+                    <div class="polaroid-caption">
+                        ${dayLabel} ｜ ${p.spot.split('・').pop()}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Like / Favorite Logic
+        function toggleLike(photoId, btnEl) {
+            likes[photoId] = !likes[photoId];
+            localStorage.setItem('305_photo_likes', JSON.stringify(likes));
+            if (btnEl) {
+                btnEl.classList.toggle('liked', likes[photoId]);
+                btnEl.innerHTML = likes[photoId] ? '💖' : '🤍';
+            }
+            updateFavCount();
+            showToast(likes[photoId] ? '已加入我的珍藏 💖' : '已從珍藏移除');
+            
+            if (currentFilter === 'fav') {
+                renderGrid(photosData.filter(p => likes[p.id]));
+            }
+        }
+
+        function toggleLikeCurrent() {
+            const p = displayedPhotos[currentIndex];
+            if (!p) return;
+            toggleLike(p.id, null);
+            const isLiked = !!likes[p.id];
+            document.getElementById('modalLikeIcon').innerText = isLiked ? '💖' : '🤍';
+            document.getElementById('modalLikeBtn').style.borderColor = isLiked ? '#f43f5e' : 'rgba(0,0,0,0.15)';
+            renderGrid(displayedPhotos);
+        }
+
+        // Filtering
+        function filterGallery(type, btnEl) {
+            currentFilter = type;
+            document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+
+            let filtered = photosData;
+            if (type === 'day1') {
+                filtered = photosData.filter(p => p.day === 1);
+            } else if (type === 'day2') {
+                filtered = photosData.filter(p => p.day === 2);
+            } else if (type === 'fav') {
+                filtered = photosData.filter(p => likes[p.id]);
+            } else if (type === 'group') {
+                filtered = photosData.filter(p => p.tags.some(t => t.includes('大合照') || t.includes('同框') || t.includes('全員')));
+            } else if (type === 'dining') {
+                filtered = photosData.filter(p => p.category.includes('用餐'));
+            } else if (type !== 'all') {
+                filtered = photosData.filter(p => p.category.includes(type) || p.spot.includes(type) || p.tags.some(t => t.includes(type)));
+            }
+
+            renderGrid(filtered);
+            showToast(`已載入 ${filtered.length} 幀照片`);
+        }
+
+        function filterBySpot(spotName) {
+            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+            const filtered = photosData.filter(p => p.spot.includes(spotName));
+            document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+            renderGrid(filtered);
+            showToast(`已鎖定景點：${spotName} (${filtered.length} 幀)`);
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!query) {
+                renderGrid(photosData);
+                return;
+            }
+            const filtered = photosData.filter(p => {
+                return p.filename.toLowerCase().includes(query) ||
+                       p.spot.toLowerCase().includes(query) ||
+                       p.desc.toLowerCase().includes(query) ||
+                       p.tags.some(t => t.toLowerCase().includes(query));
+            });
+            renderGrid(filtered);
+        }
+
+        function togglePolaroidMode() {
+            isPolaroid = !isPolaroid;
+            const btn = document.getElementById('togglePolaroid');
+            if (isPolaroid) {
+                grid.classList.add('polaroid-mode');
+                btn.classList.add('active');
+                showToast('已切換至 拍立得 復古模式 📷');
+            } else {
+                grid.classList.remove('polaroid-mode');
+                btn.classList.remove('active');
+                showToast('已切換至 現代網格 模式');
+            }
+        }
+
+        function randomShuffle() {
+            const shuffled = [...displayedPhotos].sort(() => Math.random() - 0.5);
+            renderGrid(shuffled);
+            showToast('🎲 時光機已隨機穿梭！');
+        }
+
+        // Lightbox Modal
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalDownload = document.getElementById('modalDownload');
+        const modalLikeBtn = document.getElementById('modalLikeBtn');
+        const modalLikeIcon = document.getElementById('modalLikeIcon');
+
+        function openModal(idx) {
+            currentIndex = idx;
+            const p = displayedPhotos[currentIndex];
+            if (!p) return;
+
+            modalImg.src = p.full;
+            modalTitle.innerText = `${p.day === 1 ? '第一天' : '第二天'} ｜ ${p.spot}`;
+            modalDesc.innerText = `${p.desc} (${p.location} ｜ 第 ${currentIndex + 1} / ${displayedPhotos.length} 幀)`;
+            modalDownload.href = p.full;
+
+            const isLiked = !!likes[p.id];
+            modalLikeIcon.innerText = isLiked ? '💖' : '🤍';
+            modalLikeBtn.style.borderColor = isLiked ? '#f43f5e' : 'rgba(0,0,0,0.15)';
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            if (isSlideshow) stopSlideshow();
+        }
+
+        function handleModalClick(e) {
+            if (e.target === modal) closeModal();
+        }
+
+        function prevPhoto() {
+            currentIndex = (currentIndex - 1 + displayedPhotos.length) % displayedPhotos.length;
+            openModal(currentIndex);
+        }
+
+        function nextPhoto() {
+            currentIndex = (currentIndex + 1) % displayedPhotos.length;
+            openModal(currentIndex);
+        }
+
+        // Slideshow Mode
+        function toggleSlideshow() {
+            if (!isSlideshow) {
+                isSlideshow = true;
+                openModal(0);
+                slideshowTimer = setInterval(nextPhoto, 3800);
+                showToast('▶️ 自動幻燈片播放中 (每4秒切換)');
+            } else {
+                stopSlideshow();
+            }
+        }
+
+        function stopSlideshow() {
+            isSlideshow = false;
+            if (slideshowTimer) clearInterval(slideshowTimer);
+            showToast('⏸️ 幻燈片已停止');
+        }
+
+        // Gacha Random Box (Kaohsiung Sunny Fortunes)
+        const gachaQuotes = [
+            '【大吉・港都晴空】今日宜走大港橋，海風吹出全班最帥髮型！',
+            '【特上・友誼萬歲】就算家平今天請假，合照也有你的專屬紙牌！',
+            '【吉・甜度全糖】安平白糖粿配駁二冰品，青春甜到心坎裡！',
+            '【大吉・學霸附體】科工館互動裝置全通關，頂峰相見不是夢！',
+            '【幸運・團魂爆發】手舉5號班牌，我們就是全台灣最熱血的三年五班！',
+            '【笑顏常開】吃到飽晚宴第十輪，肚皮飽了心也暖了！'
+        ];
+
+        function openGacha() {
+            rollGacha();
+            document.getElementById('gachaModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function rollGacha() {
+            const randomPhoto = photosData[Math.floor(Math.random() * photosData.length)];
+            const randomQuote = gachaQuotes[Math.floor(Math.random() * gachaQuotes.length)];
+            
+            document.getElementById('gachaImg').src = randomPhoto.full;
+            document.getElementById('gachaQuote').innerText = randomQuote;
+            document.getElementById('gachaDesc').innerText = `${randomPhoto.spot} ｜ ${randomPhoto.desc}`;
+            document.getElementById('gachaBadge').innerText = `☀️ 305 港都幸運籤 ｜ ${randomPhoto.day === 1 ? 'Day 1' : 'Day 2'}`;
+        }
+
+        function handleGachaModalClick(e) {
+            if (e.target === document.getElementById('gachaModal')) {
+                document.getElementById('gachaModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Campus Audio Synthesizer (Upbeat Sunny Kaohsiung Beach Tune)
+        let audioCtx = null;
+        let isRadioPlaying = false;
+        let radioInterval = null;
+        let melodyStep = 0;
+
+        function toggleRadio() {
+            if (!isRadioPlaying) {
+                startRadio();
+            } else {
+                stopRadio();
+            }
+        }
+
+        function startRadio() {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            isRadioPlaying = true;
+            document.getElementById('radioToggle').classList.add('playing');
+            document.getElementById('radioLabel').innerText = '暫停旋律';
+            document.getElementById('eqWrap').style.display = 'inline-flex';
+
+            // Joyful sunny Kaohsiung beach pop progression (C Major sunny chords)
+            const notes = [
+                261.63, 329.63, 392.00, 523.25, 440.00, 392.00, 329.63, 293.66,
+                329.63, 392.00, 523.25, 587.33, 659.25, 587.33, 523.25, 392.00
+            ];
+
+            function playTone(freq, duration) {
+                if (!audioCtx || audioCtx.state === 'closed') return;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            }
+
+            radioInterval = setInterval(() => {
+                if (!isRadioPlaying) return;
+                const f = notes[melodyStep % notes.length];
+                playTone(f, 0.7);
+                if (melodyStep % 2 === 0) {
+                    playTone(f / 2, 1.2); // Warm sunny bass
+                }
+                melodyStep++;
+            }, 380);
+
+            showToast('🎵 正在播放港都陽光海風旋律');
+        }
+
+        function stopRadio() {
+            isRadioPlaying = false;
+            if (radioInterval) clearInterval(radioInterval);
+            if (audioCtx) {
+                audioCtx.close();
+                audioCtx = null;
+            }
+            document.getElementById('radioToggle').classList.remove('playing');
+            document.getElementById('radioLabel').innerText = '港都海風旋律';
+            document.getElementById('eqWrap').style.display = 'none';
+            showToast('音樂已暫停');
+        }
+
+        // Guestbook System
+        let defaultNotes = [
+            {
+                author: '305 班 永遠的同窗',
+                content: '手持醒目的「5」號牌，我們就是全場最團結、最鬧騰的 305！無論走在故宮南院還是大港橋，大家在一起就是最美的風景。',
+                date: '畢旅記憶'
+            },
+            {
+                author: '家平應援團',
+                content: '合照時即使家平同學沒到，大家也寫了一張名字紙牌一起入鏡。這就是 305 —— 一個都不能少，心永遠在一起！',
+                date: '暖心點滴'
+            },
+            {
+                author: '四草粉紅戰隊隊長',
+                content: '穿上粉紅救生衣在水上綠色隧道滑行，導覽阿伯叫我們小心撞頭，全班笑成一團的瞬間，真的太難忘了！',
+                date: '生態趣事'
+            },
+            {
+                author: '隨隊班導師',
+                content: '畢業不是相遇的終點，而是你們各自發光發熱的起跑點。願歷盡千帆，歸來仍是少年！祝 305 全體同學鵬程萬里！',
+                date: '師長叮嚀'
+            }
+        ];
+
+        let guestbookNotes = JSON.parse(localStorage.getItem('305_guestbook_notes') || 'null') || defaultNotes;
+
+        function renderNotes() {
+            const container = document.getElementById('notesGrid');
+            container.innerHTML = '';
+            guestbookNotes.forEach(note => {
+                const el = document.createElement('div');
+                el.className = 'note-card';
+                el.innerHTML = `
+                    <div class="note-quote">“</div>
+                    <p class="note-content">${note.content}</p>
+                    <div class="note-footer">
+                        <span class="note-author">＠ ${note.author}</span>
+                        <span>${note.date}</span>
+                    </div>
+                `;
+                container.appendChild(el);
+            });
+        }
+
+        function addMessage(e) {
+            e.preventDefault();
+            const author = document.getElementById('authorInput').value.trim();
+            const content = document.getElementById('msgInput').value.trim();
+            if (!author || !content) return;
+
+            guestbookNotes.unshift({
+                author: author,
+                content: content,
+                date: '剛剛'
+            });
+
+            localStorage.setItem('305_guestbook_notes', JSON.stringify(guestbookNotes));
+            renderNotes();
+            document.getElementById('authorInput').value = '';
+            document.getElementById('msgInput').value = '';
+            showToast('🎉 留言已成功送出！');
+        }
+
+        // Toast Helper
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            t.style.display = 'flex';
+            setTimeout(() => { t.style.display = 'none'; }, 2400);
+        }
+
+        // Keyboard Controls
+        window.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') prevPhoto();
+                if (e.key === 'ArrowRight') nextPhoto();
+            }
+            if (document.getElementById('gachaModal').classList.contains('active') && e.key === 'Escape') {
+                document.getElementById('gachaModal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Initialize
+        updateFavCount();
+        renderGrid(photosData);
+        renderNotes();
+    </script>
+</body>
+</html>
